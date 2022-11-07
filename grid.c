@@ -1,3 +1,9 @@
+/*! \file grid.c
+    \brief A Documented file.
+    
+    Details.
+*/
+
 #include "grid.h"
 #include <stdlib.h>
 #include <stdio.h>

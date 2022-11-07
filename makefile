@@ -23,4 +23,4 @@ $(EXEC) : $(OBJETS)
 	rm -rf *.o
 
 doc:
-	doxygen
+	doxygen Doxyfile

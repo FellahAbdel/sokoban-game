@@ -1,3 +1,7 @@
+/**
+ * \file main.c
+*/
+
 #include <stdio.h>
 #include "grid.h"
 #include <stdbool.h>
