@@ -21,3 +21,6 @@ $(EXEC) : $(OBJETS)
 	$(CC) -o $@ $^
 
 	rm -rf *.o
+
+doc:
+	doxygen
