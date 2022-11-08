@@ -6,6 +6,7 @@
     
     Details.
 */
+#include "player.h"
 
 /**
 * @enum CaseType grid.h

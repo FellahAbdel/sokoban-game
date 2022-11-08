@@ -9,6 +9,7 @@
 #include "grid.h"
 
 grid initLevel(const char* filePath){
+    // Création de la grille
     grid gridInit = ((strGrid*)malloc(sizeof(strGrid)));
     if(!gridInit){
 		fprintf(stderr, "Error: Allocation échouée! ");
@@ -26,12 +27,14 @@ grid initLevel(const char* filePath){
 	int number_column = 0; // nombre de colonne
 	int number_row = 0; /// nombre de ligne
 	int number_goals = 0;
+
+
 	// on lit la première ligne du fichier
 	fgets(line, 100, file);
 	sscanf(line, "%d %d %d", &number_column, &number_row, &number_goals);
     
-    /// On initialise le nombre de ligne et de colonne dans 
-    /// notre grille de jeux
+    // On initialise le nombre de ligne et de colonne dans 
+    // notre grille de jeux
     gridInit->column_number = number_column;
     gridInit->row_number = number_row;
 
@@ -42,6 +45,7 @@ grid initLevel(const char* filePath){
 
 	int current_row = 0;
 	int current_goal = 0;
+
 	// On lit le fichier ligne par ligne jusqu'à la fin du fichier
 	while(fgets(line, 100, file) != NULL){
 		char* buffer = line;
