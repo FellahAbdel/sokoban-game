@@ -16,8 +16,8 @@ enum CaseType{
 	WALL = '#',    /// un mur
 	BOX = '$',     /// un carton
 	PLAYER = '@',  /// un joueur
-	GOAL = '.',    /// cible
-	NONE = ' '     /// rien
+	GOAL = '.',    /// une cible
+	NONE = ' '     /// néant
 };
 
 /**
@@ -33,8 +33,8 @@ struct Grid{
 };
 
 /**
-* @brief Initiatialisation du niveau de jeux
-* @param file_path le chemin du fichier
+* @brief Initiatialisation du niveau de jeux.
+* @param file_path le chemin du fichier.
 */
 void init_level(const char* file_path);
 

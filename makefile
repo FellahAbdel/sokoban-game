@@ -1,9 +1,13 @@
 
 
 CC = gcc
+
+CFLAGS = -Wall -W
+LDFLAGS = -lm
+
 SOURCES = $(wildcard *.c)  # SOURCES = main.c liste.c
 OBJETS = $(SOURCES:.c=.o)  # Recupère tous les fichiers dans sources, sauf
-							# qu'il faut remplacer les .c par .o
+						   # qu'il faut remplacer les .c par .o
 EXEC = prog
 
 all : $(EXEC)
@@ -18,7 +22,7 @@ all : $(EXEC)
 # On genère l'executable à partir de nos fichiers objets
 # $^ : Nom de toutes les dependance
 $(EXEC) : $(OBJETS)
-	$(CC) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 	rm -rf *.o
 
