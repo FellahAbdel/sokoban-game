@@ -31,6 +31,7 @@ typedef struct Grid{
 	enum CaseType** game_grid; ///< Tableau contenant les entités présents dans le jeu
 	int column_number; ///< Nombre de colonne de game_grid
 	int row_number; ///< Nombre de ligne de game_grid
+    player aPlayer;
 }strGrid, *grid;
 
 /**
