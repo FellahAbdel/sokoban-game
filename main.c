@@ -8,7 +8,8 @@
 
 int main(void){
     
-    initLevel("./level1.txt");
+    grid gameGrid = initLevel("./level1.txt");
+    display(gameGrid);
 	bool run = true;
 	while(run){
 		char entry = fgetc(stdin);

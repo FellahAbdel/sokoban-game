@@ -9,7 +9,6 @@
 #include "grid.h"
 
 grid initLevel(const char* filePath){
-
     grid gridInit = ((strGrid*)malloc(sizeof(strGrid)));
     if(!gridInit){
 		fprintf(stderr, "Error: Allocation échouée! ");
@@ -20,6 +19,7 @@ grid initLevel(const char* filePath){
 	FILE* file = fopen(filePath, "r");
 	if(!file){
 		fprintf(stderr, "Error %s not found", filePath);
+        printf("erreur\n");
 		exit(-1);
 	}
 	char line[100] = {0};
@@ -35,11 +35,10 @@ grid initLevel(const char* filePath){
     gridInit->column_number = number_column;
     gridInit->row_number = number_row;
 
-    /// *(enum CaseType) : Ne marche (pourquoi ?)
-    gridInit->game_grid = malloc(number_row * (sizeof(enum CaseType)));
     
+    gridInit->game_grid = (enum CaseType**)malloc(number_row * (sizeof(enum CaseType*)));
     for(int i = 0; i < number_row ; i++)
-        gridInit->game_grid[i] = malloc(number_column * sizeof(*(gridInit->game_grid[i])));
+        gridInit->game_grid[i] = (enum CaseType*)malloc(number_column * sizeof(enum CaseType));
 
 	int current_row = 0;
 	int current_goal = 0;
@@ -58,4 +57,16 @@ grid initLevel(const char* filePath){
 	// fermeture du fichier
 	fclose(file);
     return gridInit;
+}
+
+void display(grid theGrid){
+    int numberRow = theGrid->row_number;
+    int numberColumn = theGrid->column_number;
+
+    for(int i = 0 ; i  < numberRow; i++){
+        for(int j = 0 ; j < numberColumn; j++){
+            printf("%c", theGrid->game_grid[i][j]);
+        }
+        printf("\n");
+    }
 }
