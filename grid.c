@@ -8,11 +8,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void init_level(const char* file_path){
+grid initLevel(const char* filePath){
 	// ouverture du fichier en mode lecture
-	FILE* file = fopen(file_path, "r");
+	FILE* file = fopen(filePath, "r");
 	if(!file){
-		fprintf(stderr, "Error %s not found", file_path);
+		fprintf(stderr, "Error %s not found", filePath);
 		exit(-1);
 	}
 	char line[100] = {0};
@@ -36,4 +36,9 @@ void init_level(const char* file_path){
 	}
 	// fermeture du fichier
 	fclose(file);
+}
+
+
+void display(struct Grid *theGrid){
+
 }

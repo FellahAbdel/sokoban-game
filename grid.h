@@ -26,16 +26,22 @@ enum CaseType{
  * concernant la grille du jeu et son contenu
  */
 
-struct Grid{
+typedef struct Grid{
 	enum CaseType** game_grid; ///< Tableau contenant les entités présents dans le jeu
 	int column_number; ///< Nombre de colonne de game_grid
 	int row_number; ///< Nombre de ligne de game_grid
-};
+}strGrid, *grid;
 
 /**
 * @brief Initiatialisation du niveau de jeux.
 * @param file_path le chemin du fichier.
 */
-void init_level(const char* file_path);
+grid initLevel(const char* filePath);
+
+/**
+ * @brief Affichage de la grille
+ * @param theGrid Un pointeur vers la grille.
+*/
+void display(grid theGrid);
 
 #endif

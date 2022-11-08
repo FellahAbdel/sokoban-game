@@ -7,7 +7,7 @@
 #include <stdbool.h>
 int main(void){
     
-    init_level("./level1.txt");
+    initLevel("./level1.txt");
 	bool run = true;
 	while(run){
 		char entry = fgetc(stdin);

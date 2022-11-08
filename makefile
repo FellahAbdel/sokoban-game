@@ -2,7 +2,7 @@
 
 CC = gcc
 
-CFLAGS = -Wall -W
+CFLAGS = -Wall -Wextra -W
 LDFLAGS = -lm
 
 SOURCES = $(wildcard *.c)  # SOURCES = main.c liste.c
@@ -28,3 +28,6 @@ $(EXEC) : $(OBJETS)
 
 doc:
 	doxygen Doxyfile
+
+archive:
+	tar -cf KAYA_RHABY_PASCIA_HERSCHE_DIALLO_ABDOUL_AZIZ.tar.gz *.c *.h makefile level1.txt README.md Doxyfile
