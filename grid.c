@@ -53,6 +53,13 @@ grid initLevel(const char* filePath){
 		while(*buffer && *buffer != '\n'){
             /// On remplit en même temps, la grille du jeux
             gridInit->game_grid[current_row][current_column] = *buffer;
+
+            // On recupère les coordonnées du joueur
+            if(*buffer == '@'){
+                gridInit->aPlayer.x = current_row;
+                gridInit->aPlayer.y = current_column;
+            }
+
 			current_column += 1;
 			buffer += 1;
 		}		
