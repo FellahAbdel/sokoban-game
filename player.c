@@ -1,8 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "grid.h"
+#include "player.h"
 
-
-// void movePlayer(grid theGrid, enum Direction direction){
-//     printf("he\n");
-// }
+void movePlayer(struct Grid *theGrid, enum Direction direction){
+    
+}

@@ -1,12 +1,12 @@
 #ifndef GRID_HEADER
 #define GRID_HEADER
-
-/*! \file grid.h
-    \brief A Documented file.
-    
-    Details.
-*/
 #include "player.h"
+
+/** 
+* \file grid.h
+* \brief A Documented file.
+* Details.
+*/
 
 /**
 * @enum CaseType grid.h
@@ -57,6 +57,4 @@ void display(grid theGrid);
 * @brief Déplacement d'un joueur dans la grille.
 * @param direction Direction vers laquelle le joueur se deplace.
 */
-void movePlayer(grid theGrid, enum Direction direction);
-
 #endif

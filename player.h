@@ -1,13 +1,14 @@
 #ifndef PLAYER_HEADER
 #define PLAYER_HEADER
 
+struct Grid;
 
-/** \file player.h
-*    \brief A Documented file.
-*    Details.
+/** 
+* @file player.h
+* @brief A Documented file.
+* Details.
 */
 
-#include "grid.h"
 
 /**
  * @struct Player player.h
@@ -24,10 +25,17 @@ typedef struct Player{
 * Définit le sens de direction d'une case 
 */
 enum Direction {
-    Top,        /// Haut
-    Right,      /// Droite
+    Top,         /// Haut
+    Right,       /// Droite
     Bottom,      /// Bas
-    Left      /// Gauche
+    Left         /// Gauche
 };
+
+/**
+* @brief Déplacement d'un joueur dans la grille.
+* @param direction Direction vers laquelle le joueur se deplace.
+*/
+
+void movePlayer(struct Grid *theGrid, enum Direction direction);
 
 #endif

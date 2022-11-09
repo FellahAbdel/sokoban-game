@@ -1,11 +1,13 @@
-/** \file grid.c
-*   \brief A Documented file. 
-*   Details.
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "grid.h"
+
+/** 
+* @file grid.c
+* @brief A Documented file. 
+* Details.
+*/
+
 
 
 enum CaseType** malloc2DCaseType(int numberOfRow, int numberOfColumn){
@@ -48,11 +50,7 @@ grid initLevel(const char* filePath){
     gridInit->column_number = number_column;
     gridInit->row_number = number_row;
 
-    
-    // gridInit->game_grid = (enum CaseType**)malloc(number_row * (sizeof(enum CaseType*)));
-    // for(int i = 0; i < number_row ; i++)
-    //     gridInit->game_grid[i] = (enum CaseType*)malloc(number_column * sizeof(enum CaseType));
-    gridInit->game_grid = malloc2DcaseType(number_row, number_column);
+    gridInit->game_grid = malloc2DCaseType(number_row, number_column);
 
 	int current_row = 0;
 	int current_goal = 0;

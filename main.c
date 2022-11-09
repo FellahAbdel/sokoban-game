@@ -1,11 +1,12 @@
-/**
- * \file main.c
-*/
-
 #include <stdio.h>
 #include <stdbool.h>
 #include "grid.h"
 #include "player.h"
+
+/**
+ * \file main.c
+*/
+
 
 int main(void){
     

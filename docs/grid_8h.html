@@ -117,9 +117,15 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a89adc46b5522a9d345aae575a25b670b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_grid.html">grid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grid_8h.html#a89adc46b5522a9d345aae575a25b670b">initLevel</a> (const char *filePath)</td></tr>
 <tr class="memdesc:a89adc46b5522a9d345aae575a25b670b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiatialisation du niveau de jeux.  <a href="grid_8h.html#a89adc46b5522a9d345aae575a25b670b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a89adc46b5522a9d345aae575a25b670b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd6ea7224fa044b4b4a8f44bbba9da7"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="grid_8h.html#a4fd76f4d0fbadc08ec99451b92478a7e">CaseType</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grid_8h.html#a2dd6ea7224fa044b4b4a8f44bbba9da7">malloc2DCaseType</a> (int numberOfRow, int numberOfColumn)</td></tr>
+<tr class="memdesc:a2dd6ea7224fa044b4b4a8f44bbba9da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alloue un tableau à 2D pour les entités du jeux.  <a href="grid_8h.html#a2dd6ea7224fa044b4b4a8f44bbba9da7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2dd6ea7224fa044b4b4a8f44bbba9da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c770a2f3bae8f4a0a4134b947c65e6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grid_8h.html#a1c770a2f3bae8f4a0a4134b947c65e6d">display</a> (<a class="el" href="struct_grid.html">grid</a> theGrid)</td></tr>
 <tr class="memdesc:a1c770a2f3bae8f4a0a4134b947c65e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage de la grille.  <a href="grid_8h.html#a1c770a2f3bae8f4a0a4134b947c65e6d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1c770a2f3bae8f4a0a4134b947c65e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa21f25def278409e352cbd78d1e2dac4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grid_8h.html#aa21f25def278409e352cbd78d1e2dac4">movePlayer</a> (<a class="el" href="struct_grid.html">grid</a> theGrid, enum <a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction)</td></tr>
+<tr class="memdesc:aa21f25def278409e352cbd78d1e2dac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déplacement d'un joueur dans la grille.  <a href="grid_8h.html#aa21f25def278409e352cbd78d1e2dac4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa21f25def278409e352cbd78d1e2dac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p >A Documented file. </p>
@@ -202,6 +208,79 @@ Fonctions</h2></td></tr>
 </dl>
 <p >nombre de ligne</p>
 <p >On remplit en même temps, la grille du jeux</p>
+
+</div>
+</div>
+<a id="a2dd6ea7224fa044b4b4a8f44bbba9da7" name="a2dd6ea7224fa044b4b4a8f44bbba9da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dd6ea7224fa044b4b4a8f44bbba9da7">&#9670;&#160;</a></span>malloc2DCaseType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="grid_8h.html#a4fd76f4d0fbadc08ec99451b92478a7e">CaseType</a> ** malloc2DCaseType </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numberOfRow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numberOfColumn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alloue un tableau à 2D pour les entités du jeux. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numberOfRow</td><td>Nombre de ligne de la grille </td></tr>
+    <tr><td class="paramname">numberOfColumn</td><td>Nombre de colonne de la grillej </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa21f25def278409e352cbd78d1e2dac4" name="aa21f25def278409e352cbd78d1e2dac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21f25def278409e352cbd78d1e2dac4">&#9670;&#160;</a></span>movePlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void movePlayer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_grid.html">grid</a>&#160;</td>
+          <td class="paramname"><em>theGrid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a>&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Déplacement d'un joueur dans la grille. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>Direction vers laquelle le joueur se deplace. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
