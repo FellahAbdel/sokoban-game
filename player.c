@@ -20,11 +20,11 @@ char getItem(struct Grid *theGrid, enum Direction direction){
     j = theGrid->aPlayer.y;
     
 
-    if( direction == haut){
+    if( direction == Top){
         i--;
-    }else if (direction == droite){
+    }else if (direction == Right){
         j++;
-    }else if( direction == bas){
+    }else if( direction == Bottom){
         i++;
     }else {
         j--;
@@ -32,7 +32,7 @@ char getItem(struct Grid *theGrid, enum Direction direction){
 
     // Il y aura un bug si i < 0 ou i > numbLigne
     // ou j < 0 ou j > nombreCol
-    if( isItemInGrid(i, j)){
+    if( isItemInGrid(theGrid, i, j)){
         item = theGrid->game_grid[i][j];
     }
     
