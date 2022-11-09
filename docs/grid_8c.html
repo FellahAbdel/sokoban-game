@@ -77,31 +77,60 @@ $(function() {
 
 <p>A Documented file.  
 <a href="#details">Plus de détails...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="grid_8h_source.html">grid.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="grid_8h_source.html">grid.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:ae1147995b67fb630e2a03d3f5eee5fb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grid_8c.html#ae1147995b67fb630e2a03d3f5eee5fb6">init_level</a> (const char *file_path)</td></tr>
-<tr class="memdesc:ae1147995b67fb630e2a03d3f5eee5fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiatialisation du niveau de jeux.  <a href="grid_8c.html#ae1147995b67fb630e2a03d3f5eee5fb6">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ae1147995b67fb630e2a03d3f5eee5fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89adc46b5522a9d345aae575a25b670b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_grid.html">grid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grid_8c.html#a89adc46b5522a9d345aae575a25b670b">initLevel</a> (const char *filePath)</td></tr>
+<tr class="memdesc:a89adc46b5522a9d345aae575a25b670b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiatialisation du niveau de jeux.  <a href="grid_8c.html#a89adc46b5522a9d345aae575a25b670b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a89adc46b5522a9d345aae575a25b670b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c770a2f3bae8f4a0a4134b947c65e6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grid_8c.html#a1c770a2f3bae8f4a0a4134b947c65e6d">display</a> (<a class="el" href="struct_grid.html">grid</a> theGrid)</td></tr>
+<tr class="memdesc:a1c770a2f3bae8f4a0a4134b947c65e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage de la grille.  <a href="grid_8c.html#a1c770a2f3bae8f4a0a4134b947c65e6d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1c770a2f3bae8f4a0a4134b947c65e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p >A Documented file. </p>
 <p >Details. </p>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
-<a id="ae1147995b67fb630e2a03d3f5eee5fb6" name="ae1147995b67fb630e2a03d3f5eee5fb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1147995b67fb630e2a03d3f5eee5fb6">&#9670;&#160;</a></span>init_level()</h2>
+<a id="a1c770a2f3bae8f4a0a4134b947c65e6d" name="a1c770a2f3bae8f4a0a4134b947c65e6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c770a2f3bae8f4a0a4134b947c65e6d">&#9670;&#160;</a></span>display()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void init_level </td>
+          <td class="memname">void display </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_grid.html">grid</a>&#160;</td>
+          <td class="paramname"><em>theGrid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affichage de la grille. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">theGrid</td><td>Un pointeur vers la grille. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a89adc46b5522a9d345aae575a25b670b" name="a89adc46b5522a9d345aae575a25b670b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89adc46b5522a9d345aae575a25b670b">&#9670;&#160;</a></span>initLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_grid.html">grid</a> initLevel </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>file_path</em></td><td>)</td>
+          <td class="paramname"><em>filePath</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -110,11 +139,12 @@ Fonctions</h2></td></tr>
 <p>Initiatialisation du niveau de jeux. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_path</td><td>le chemin du fichier </td></tr>
+    <tr><td class="paramname">file_path</td><td>le chemin du fichier. </td></tr>
   </table>
   </dd>
 </dl>
 <p >nombre de ligne</p>
+<p >On remplit en même temps, la grille du jeux</p>
 
 </div>
 </div>

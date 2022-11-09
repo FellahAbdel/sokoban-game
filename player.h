@@ -1,11 +1,14 @@
 #ifndef PLAYER_HEADER
 #define PLAYER_HEADER
 
-/*! \file player.h
-    \brief A Documented file.
-    
-    Details.
+
+/** \file player.h
+*    \brief A Documented file.
+*    Details.
 */
+
+#include "grid.h"
+
 /**
  * @struct Player player.h
  * @brief Cette structure contient les informations 
@@ -21,11 +24,10 @@ typedef struct Player{
 * Définit le sens de direction d'une case 
 */
 enum Direction {
-    Top, 
-    Left,
-    Right,
-    Bottom
-}
-
+    Top,        /// Haut
+    Right,      /// Droite
+    Bottom,      /// Bas
+    Left      /// Gauche
+};
 
 #endif

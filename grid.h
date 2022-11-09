@@ -41,9 +41,22 @@ typedef struct Grid{
 grid initLevel(const char* filePath);
 
 /**
+* @brief Alloue un tableau à 2D pour les entités du jeux.
+* @param numberOfRow Nombre de ligne de la grille
+* @param numberOfColumn Nombre de colonne de la grillej 
+*/
+enum CaseType** malloc2DCaseType(int numberOfRow, int numberOfColumn);
+
+/**
  * @brief Affichage de la grille
  * @param theGrid Un pointeur vers la grille.
 */
 void display(grid theGrid);
+
+/**
+* @brief Déplacement d'un joueur dans la grille.
+* @param direction Direction vers laquelle le joueur se deplace.
+*/
+void movePlayer(grid theGrid, enum Direction direction);
 
 #endif

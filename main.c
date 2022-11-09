@@ -3,12 +3,14 @@
 */
 
 #include <stdio.h>
-#include "grid.h"
 #include <stdbool.h>
+#include "grid.h"
+#include "player.h"
 
 int main(void){
     
     grid gameGrid = initLevel("./level1.txt");
+    printf("Player (x, y) = (%d, %d)\n", gameGrid->aPlayer.x, gameGrid->aPlayer.y);
     display(gameGrid);
 	bool run = true;
 	while(run){
