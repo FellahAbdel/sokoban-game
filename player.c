@@ -30,14 +30,17 @@ char getItem(struct Grid *theGrid, enum Direction direction){
         j--;
     }
 
-    // Il y aura un bug si i < 0 ou i > numbLigne
-    // ou j < 0 ou j > nombreCol
     if( isItemInGrid(theGrid, i, j)){
         item = theGrid->game_grid[i][j];
     }
     
     return item;
 }
+
+int isWall(char item){
+    return item == '#';
+};
+
 void movePlayer(struct Grid *theGrid, enum Direction direction){
 
 }

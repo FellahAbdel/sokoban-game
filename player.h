@@ -31,11 +31,6 @@ enum Direction {
     Left         /// Gauche
 };
 
-/**
-* @brief Déplacement d'un joueur dans la grille.
-* @param direction Direction vers laquelle le joueur se deplace.
-*/
-void movePlayer(struct Grid *theGrid, enum Direction direction);
 
 /**
 * @brief Teste s'il y a une entité au cordoonées itemX et itemY.
@@ -52,4 +47,16 @@ int isItemInGrid(struct Grid *theGrid, int itemX, int itemY);
 * @return '0' : S'il y a pas d'entité sinon l'entité.
 */
 char getItem(struct Grid *theGrid, enum Direction direction);
+
+/**
+ * @brief Est-ce que c'est un mur.
+ * @param item Une entité.
+*/
+int isWall(char item);
+
+/**
+* @brief Déplacement d'un joueur dans la grille.
+* @param direction Direction vers laquelle le joueur se deplace.
+*/
+void movePlayer(struct Grid *theGrid, enum Direction direction);
 #endif
