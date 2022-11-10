@@ -46,11 +46,12 @@ int isItemInGrid(struct Grid *theGrid, int itemX, int itemY);
 * @param theGrid Un pointeur vers la grille de jeux.
 * @return '0' : S'il y a pas d'entité sinon l'entité.
 */
-char getItem(struct Grid *theGrid, enum Direction direction);
+char getItemAt(struct Grid *theGrid, enum Direction direction);
 
 /**
  * @brief Est-ce que c'est un mur.
  * @param item Une entité.
+ * @return 1 si oui 0 sinon
 */
 int isWall(char item);
 

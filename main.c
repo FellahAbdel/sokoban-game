@@ -11,8 +11,10 @@
 int main(void){
     
     grid gameGrid = initLevel("./level1.txt");
-    printf("Player (x, y) = (%d, %d)\n", gameGrid->aPlayer.x, gameGrid->aPlayer.y);
     display(gameGrid);
+
+    movePlayer(gameGrid, Bottom);
+
 	bool run = true;
 	while(run){
 		char entry = fgetc(stdin);

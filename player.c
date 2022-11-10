@@ -13,9 +13,9 @@ int isItemInGrid(struct Grid *theGrid, int itemX, int itemY){
     return 0;
 }
 
-char getItem(struct Grid *theGrid, enum Direction direction){
+char getItemAt(struct Grid *theGrid, enum Direction direction){
     int i, j;
-    char item = '0' ;
+    char item = '0' ;  // Au cas où, on sort de la grille
     i = theGrid->aPlayer.x;
     j = theGrid->aPlayer.y;
     
@@ -33,7 +33,7 @@ char getItem(struct Grid *theGrid, enum Direction direction){
     if( isItemInGrid(theGrid, i, j)){
         item = theGrid->game_grid[i][j];
     }
-    
+
     return item;
 }
 
@@ -42,5 +42,8 @@ int isWall(char item){
 };
 
 void movePlayer(struct Grid *theGrid, enum Direction direction){
-
+    char item = getItemAt(theGrid, direction);
+    if(item != '0'){
+        
+    }
 }
