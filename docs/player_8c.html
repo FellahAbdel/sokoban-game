@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Sokoban Project: Référence du fichier player.h</title>
+<title>Sokoban Project: Référence du fichier player.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,82 +70,29 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Structures de données</a> &#124;
-<a href="#typedef-members">Définitions de type</a> &#124;
-<a href="#enum-members">Énumérations</a> &#124;
 <a href="#func-members">Fonctions</a>  </div>
-  <div class="headertitle"><div class="title">Référence du fichier player.h</div></div>
+  <div class="headertitle"><div class="title">Référence du fichier player.c</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>A Documented file. Details.  
-<a href="#details">Plus de détails...</a></p>
-
-<p><a href="player_8h_source.html">Aller au code source de ce fichier.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Structures de données</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_player.html">Player</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette structure contient les informations concernant liées à la position du joueur.  <a href="struct_player.html#details">Plus de détails...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Définitions de type</h2></td></tr>
-<tr class="memitem:a6957ad73d86992aed19c9e80daf3bcc1"><td class="memItemLeft" align="right" valign="top"><a id="a6957ad73d86992aed19c9e80daf3bcc1" name="a6957ad73d86992aed19c9e80daf3bcc1"></a>
-typedef struct <a class="el" href="struct_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><b>player</b></td></tr>
-<tr class="separator:a6957ad73d86992aed19c9e80daf3bcc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Énumérations</h2></td></tr>
-<tr class="memitem:a224b9163917ac32fc95a60d8c1eec3aa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> { <b>Top</b>
-, <a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aaad48f7af8c070184f3774c8e85854eb66">Right</a>
-, <a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aaa05cdd4fa6b505ee008f4e865acfecccb">Bottom</a>
-, <a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aaa9d4d8b0b72fc2659da772d761a3c5ecb">Left</a>
- }</td></tr>
-<tr class="separator:a224b9163917ac32fc95a60d8c1eec3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="grid_8h_source.html">grid.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="player_8h_source.html">player.h</a>&quot;</code><br />
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:ac3bb3a8b3a91dfbedf157b474780d622"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#ac3bb3a8b3a91dfbedf157b474780d622">isItemInGrid</a> (struct <a class="el" href="struct_grid.html">Grid</a> *theGrid, int itemX, int itemY)</td></tr>
-<tr class="memdesc:ac3bb3a8b3a91dfbedf157b474780d622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste s'il y a une entité au cordoonées itemX et itemY.  <a href="player_8h.html#ac3bb3a8b3a91dfbedf157b474780d622">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:ac3bb3a8b3a91dfbedf157b474780d622"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#ac3bb3a8b3a91dfbedf157b474780d622">isItemInGrid</a> (struct <a class="el" href="struct_grid.html">Grid</a> *theGrid, int itemX, int itemY)</td></tr>
+<tr class="memdesc:ac3bb3a8b3a91dfbedf157b474780d622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste s'il y a une entité au cordoonées itemX et itemY.  <a href="player_8c.html#ac3bb3a8b3a91dfbedf157b474780d622">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac3bb3a8b3a91dfbedf157b474780d622"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66f402d03dad37a1f771cb4f1881d872"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a66f402d03dad37a1f771cb4f1881d872">getItemAt</a> (struct <a class="el" href="struct_grid.html">Grid</a> *theGrid, enum <a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction)</td></tr>
-<tr class="memdesc:a66f402d03dad37a1f771cb4f1881d872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de d'avoir l'entité à la direction d.  <a href="player_8h.html#a66f402d03dad37a1f771cb4f1881d872">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a66f402d03dad37a1f771cb4f1881d872"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a66f402d03dad37a1f771cb4f1881d872">getItemAt</a> (struct <a class="el" href="struct_grid.html">Grid</a> *theGrid, enum <a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction)</td></tr>
+<tr class="memdesc:a66f402d03dad37a1f771cb4f1881d872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de d'avoir l'entité à la direction d.  <a href="player_8c.html#a66f402d03dad37a1f771cb4f1881d872">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a66f402d03dad37a1f771cb4f1881d872"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84170fafd22f1291f8f7114306ffc1fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a84170fafd22f1291f8f7114306ffc1fc">isWall</a> (char item)</td></tr>
-<tr class="memdesc:a84170fafd22f1291f8f7114306ffc1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Est-ce que c'est un mur.  <a href="player_8h.html#a84170fafd22f1291f8f7114306ffc1fc">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a84170fafd22f1291f8f7114306ffc1fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a84170fafd22f1291f8f7114306ffc1fc">isWall</a> (char item)</td></tr>
+<tr class="memdesc:a84170fafd22f1291f8f7114306ffc1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Est-ce que c'est un mur.  <a href="player_8c.html#a84170fafd22f1291f8f7114306ffc1fc">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a84170fafd22f1291f8f7114306ffc1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a6b70bcca4e948950474a5a47dfdebd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a9a6b70bcca4e948950474a5a47dfdebd">movePlayer</a> (struct <a class="el" href="struct_grid.html">Grid</a> *theGrid, enum <a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction)</td></tr>
-<tr class="memdesc:a9a6b70bcca4e948950474a5a47dfdebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déplacement d'un joueur dans la grille.  <a href="player_8h.html#a9a6b70bcca4e948950474a5a47dfdebd">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a9a6b70bcca4e948950474a5a47dfdebd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a9a6b70bcca4e948950474a5a47dfdebd">movePlayer</a> (struct <a class="el" href="struct_grid.html">Grid</a> *theGrid, enum <a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction)</td></tr>
+<tr class="memdesc:a9a6b70bcca4e948950474a5a47dfdebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déplacement d'un joueur dans la grille.  <a href="player_8c.html#a9a6b70bcca4e948950474a5a47dfdebd">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a9a6b70bcca4e948950474a5a47dfdebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p >A Documented file. Details. </p>
-</div><h2 class="groupheader">Documentation du type de l'énumération</h2>
-<a id="a224b9163917ac32fc95a60d8c1eec3aa" name="a224b9163917ac32fc95a60d8c1eec3aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a224b9163917ac32fc95a60d8c1eec3aa">&#9670;&#160;</a></span>Direction</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p ><a class="el" href="player_8h.html" title="A Documented file. Details.">player.h</a> Définit le sens de direction d'une case </p>
-<table class="fieldtable">
-<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a224b9163917ac32fc95a60d8c1eec3aaad48f7af8c070184f3774c8e85854eb66" name="a224b9163917ac32fc95a60d8c1eec3aaad48f7af8c070184f3774c8e85854eb66"></a>Right&#160;</td><td class="fielddoc"><p >Haut. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a224b9163917ac32fc95a60d8c1eec3aaa05cdd4fa6b505ee008f4e865acfecccb" name="a224b9163917ac32fc95a60d8c1eec3aaa05cdd4fa6b505ee008f4e865acfecccb"></a>Bottom&#160;</td><td class="fielddoc"><p >Droite. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a224b9163917ac32fc95a60d8c1eec3aaa9d4d8b0b72fc2659da772d761a3c5ecb" name="a224b9163917ac32fc95a60d8c1eec3aaa9d4d8b0b72fc2659da772d761a3c5ecb"></a>Left&#160;</td><td class="fielddoc"><p >Bas. </p>
-<p >Gauche </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 <h2 class="groupheader">Documentation des fonctions</h2>
 <a id="a66f402d03dad37a1f771cb4f1881d872" name="a66f402d03dad37a1f771cb4f1881d872"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a66f402d03dad37a1f771cb4f1881d872">&#9670;&#160;</a></span>getItemAt()</h2>
