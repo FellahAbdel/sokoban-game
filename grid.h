@@ -47,7 +47,7 @@ grid initLevel(const char* filePath);
 * @param numberOfRow Nombre de ligne de la grille
 * @param numberOfColumn Nombre de colonne de la grillej 
 */
-enum CaseType** malloc2DCaseType(int numberOfRow, int numberOfColumn);
+CaseType** malloc2DCaseType(int numberOfRow, int numberOfColumn);
 
 /**
  * @brief Affichage de la grille
