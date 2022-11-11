@@ -55,6 +55,13 @@ char getItemAt(struct Grid *theGrid, enum Direction direction);
 */
 int isWall(char item);
 
+int isWall(char item);
+
+int isNone(char item);
+
+
+player getCoordinatesAt(player thePlayer, enum Direction direction);
+
 /**
 * @brief Déplacement d'un joueur dans la grille.
 * @param direction Direction vers laquelle le joueur se deplace.
