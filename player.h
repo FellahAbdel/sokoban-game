@@ -55,7 +55,7 @@ char getItemAt(struct Grid *theGrid, enum Direction direction);
 */
 int isWall(char item);
 
-int isWall(char item);
+int isBox(char item);
 
 int isNone(char item);
 

@@ -48,15 +48,7 @@ char getItemAt(struct Grid *theGrid, enum Direction direction){
     int i, j;
     player playerCoordinatesAt;
     char item = '0' ;  // Au cas où, on sort de la grille
-    // if( direction == Top){
-    //     i--;
-    // }else if (direction == Right){
-    //     j++;
-    // }else if( direction == Bottom){
-    //     i++;
-    // }else {
-    //     j--;
-    // }
+
     playerCoordinatesAt = getCoordinatesAt(theGrid->aPlayer, direction);
 
     i = playerCoordinatesAt.x ;
@@ -75,31 +67,43 @@ char getItemAt(struct Grid *theGrid, enum Direction direction){
  * @return 1 si oui 0 sinon
 */
 int isWall(char item){
-    return item == '#';
+    return item == WALL;
 };
 
 int isBox(char item){
-    return item == Box;
+    return item == BOX;
 }
 
 int isNone(char item){
-    return item == None;
+    return item == NONE;
 }
 
 
 void movePlayer(struct Grid *theGrid, enum Direction direction){
     char item = getItemAt(theGrid, direction);
     player thePlayer = theGrid->aPlayer;
+    player thePlayerNewPosition;
     if(item != '0'){
         // Nous sommes toujours dans la grille de jeux.
         if(!isWall(item) && !isBox(item)){
             // Ce n'est ni un mûr, ni un carton.
             // Donc c'est soit le néant ou une cible.
-            // On deplace le joueur.
             if(isNone(item)){
+                // Si c'est le néant. 
                 // On deplace le joueur tranquillement.
-                // C'est juste un swap
+
+                // A la position (i, j) on met None
+                int i = thePlayer.x;
+                int j = thePlayer.y;
                 theGrid->game_grid[i][j] = NONE ;
+
+                // A la position (i + dx, j + dx) on met le joueur.
+                thePlayerNewPosition = getCoordinatesAt(thePlayer, direction);
+
+                i = thePlayerNewPosition.x;
+                j = thePlayerNewPosition.y;
+
+                theGrid->game_grid[i][j] = PLAYER;
             }
         }
     }
