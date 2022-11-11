@@ -13,15 +13,13 @@
 * Définit le type d'une case 
 */
 
-enum CaseType{
+typedef enum CaseType{
 	WALL = '#',    /// un mur
 	BOX = '$',     /// un carton
 	PLAYER = '@',  /// un joueur
 	GOAL = '.',    /// une cible
 	NONE = ' '     /// néant
-};
-
-typedef enum CaseType CaseType;
+}CaseType;
 
 /**
  * @struct Grid grid.h

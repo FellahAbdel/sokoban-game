@@ -24,12 +24,12 @@ typedef struct Player{
 * @enum Direction player.h
 * Définit le sens de direction d'une case 
 */
-enum Direction {
+typedef enum Direction {
     Top,         /// Haut
     Right,       /// Droite
     Bottom,      /// Bas
     Left         /// Gauche
-};
+}Direction;
 
 
 /**
@@ -46,7 +46,7 @@ int isItemInGrid(struct Grid *theGrid, int itemX, int itemY);
 * @param theGrid Un pointeur vers la grille de jeux.
 * @return '0' : S'il y a pas d'entité sinon l'entité.
 */
-char getItemAt(struct Grid *theGrid, enum Direction direction);
+char getItemAt(struct Grid *theGrid, Direction direction);
 
 /**
  * @brief Est-ce que c'est un mur.
@@ -69,17 +69,19 @@ int isBox(char item);
 */
 int isNone(char item);
 
+int isGoal(char item);
+
 
 /**
  * @brief Coordonées du joeur à la direction d.
  * @param thePlayer Le joeur.
  * @return Les nouvelles coordonées du joeur à la direction d.
 */
-player getCoordinatesAt(player thePlayer, enum Direction direction);
+player getCoordinatesAt(player thePlayer, Direction direction);
 
 /**
 * @brief Déplacement d'un joueur dans la grille.
 * @param direction Direction vers laquelle le joueur se deplace.
 */
-void movePlayer(struct Grid *theGrid, enum Direction direction);
+void movePlayer(struct Grid *theGrid, Direction direction);
 #endif
