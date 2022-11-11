@@ -2,13 +2,13 @@
 #define PLAYER_HEADER
 
 struct Grid;
+enum CaseType;
 
 /** 
 * @file player.h
 * @brief A Documented file.
 * Details.
 */
-
 
 /**
  * @struct Player player.h
@@ -69,6 +69,11 @@ int isBox(char item);
 */
 int isNone(char item);
 
+/**
+ * @brief Est-ce que c'est une cible.
+ * @param item Une entité.
+ * @return 1 si oui 0 sinon
+*/
 int isGoal(char item);
 
 
@@ -78,6 +83,15 @@ int isGoal(char item);
  * @return Les nouvelles coordonées du joeur à la direction d.
 */
 player getCoordinatesAt(player thePlayer, Direction direction);
+
+/**
+ * @brief 
+ * @param theGrid Un pointeur vers la grille de jeux.
+ * @param coordinates Coordonnées de la case où l'on met l'entité.
+ * @param item Entité à mettre. 
+ * @return Rien (On modifie la grille).
+*/
+void setItemAt(struct Grid *theGrid, player coordinates, enum CaseType item);
 
 /**
 * @brief Déplacement d'un joueur dans la grille.

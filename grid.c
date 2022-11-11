@@ -69,9 +69,10 @@ grid initLevel(const char* filePath){
                 gridInit->aPlayer.y = current_column;
             }
 
-            if(*buffer == GOAL)
+            if(*buffer == GOAL){
                 current_goal++;
-                
+            }
+
 			current_column += 1;
 			buffer += 1;
 		}		

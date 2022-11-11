@@ -82,8 +82,16 @@ int isGoal(char item){
 }
 
 
+void setItemAt(struct Grid *theGrid, player coordinates, enum CaseType item){
+    int i = coordinates.x;
+    int j = coordinates.y;
+
+    theGrid->game_grid[i][j] = item;
+    return;
+}
+
 void movePlayer(struct Grid *theGrid, Direction direction){
-    char item = getItemAt(theGrid, direction);
+    CaseType item = getItemAt(theGrid, direction);
     player thePlayer = theGrid->aPlayer;
     player thePlayerNewPosition;
 
@@ -97,19 +105,13 @@ void movePlayer(struct Grid *theGrid, Direction direction){
                 // On deplace le joueur tranquillement.
 
                 // A la position (i, j) on met None
-                int i = thePlayer.x;
-                int j = thePlayer.y;
-                theGrid->game_grid[i][j] = NONE ;
+                setItemAt(theGrid, thePlayer, NONE);
 
                 // A la position (i + dx, j + dx) on met le joueur.
                 thePlayerNewPosition = getCoordinatesAt(thePlayer, direction);
+                setItemAt(theGrid, thePlayerNewPosition, PLAYER);
 
-                i = thePlayerNewPosition.x;
-                j = thePlayerNewPosition.y;
-
-                theGrid->game_grid[i][j] = PLAYER;
-
-                // On change la position du joeur, après le deplacement
+                // On change la position du joueur, après le deplacement
                 theGrid->aPlayer = thePlayerNewPosition;
             }
         }
