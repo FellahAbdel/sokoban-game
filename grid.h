@@ -21,6 +21,8 @@ enum CaseType{
 	NONE = ' '     /// néant
 };
 
+typedef enum CaseType CaseType;
+
 /**
  * @struct Grid grid.h
  * @brief Cette structure contient les informations 

@@ -10,12 +10,12 @@
 
 
 
-enum CaseType** malloc2DCaseType(int numberOfRow, int numberOfColumn){
-    enum CaseType** tabCaseType;
+CaseType** malloc2DCaseType(int numberOfRow, int numberOfColumn){
+    CaseType** tabCaseType;
 
-    tabCaseType = (enum CaseType**)malloc(numberOfRow * (sizeof(enum CaseType*)));
+    tabCaseType = (CaseType**)malloc(numberOfRow * (sizeof(CaseType*)));
     for(int i = 0; i < numberOfRow ; i++)
-        tabCaseType[i] = (enum CaseType*)malloc(numberOfColumn * sizeof(enum CaseType));
+        tabCaseType[i] = (CaseType*)malloc(numberOfColumn * sizeof(CaseType));
 
     return tabCaseType;
 }

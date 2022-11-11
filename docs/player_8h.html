@@ -115,6 +115,15 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a84170fafd22f1291f8f7114306ffc1fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a84170fafd22f1291f8f7114306ffc1fc">isWall</a> (char item)</td></tr>
 <tr class="memdesc:a84170fafd22f1291f8f7114306ffc1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Est-ce que c'est un mur.  <a href="player_8h.html#a84170fafd22f1291f8f7114306ffc1fc">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a84170fafd22f1291f8f7114306ffc1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa132882e8d68b6ea449d29b69bb7417e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#aa132882e8d68b6ea449d29b69bb7417e">isBox</a> (char item)</td></tr>
+<tr class="memdesc:aa132882e8d68b6ea449d29b69bb7417e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Est-ce que c'est un carton.  <a href="player_8h.html#aa132882e8d68b6ea449d29b69bb7417e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa132882e8d68b6ea449d29b69bb7417e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0560601ff57420760e38cd2333e4267"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#ac0560601ff57420760e38cd2333e4267">isNone</a> (char item)</td></tr>
+<tr class="memdesc:ac0560601ff57420760e38cd2333e4267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Est-ce que c'est un néant.  <a href="player_8h.html#ac0560601ff57420760e38cd2333e4267">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac0560601ff57420760e38cd2333e4267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58cbf1d12fceac765c86f59f15c89887"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_player.html">player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a58cbf1d12fceac765c86f59f15c89887">getCoordinatesAt</a> (<a class="el" href="struct_player.html">player</a> thePlayer, enum <a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction)</td></tr>
+<tr class="memdesc:a58cbf1d12fceac765c86f59f15c89887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordonées du joeur à la direction d.  <a href="player_8h.html#a58cbf1d12fceac765c86f59f15c89887">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a58cbf1d12fceac765c86f59f15c89887"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a6b70bcca4e948950474a5a47dfdebd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a9a6b70bcca4e948950474a5a47dfdebd">movePlayer</a> (struct <a class="el" href="struct_grid.html">Grid</a> *theGrid, enum <a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction)</td></tr>
 <tr class="memdesc:a9a6b70bcca4e948950474a5a47dfdebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déplacement d'un joueur dans la grille.  <a href="player_8h.html#a9a6b70bcca4e948950474a5a47dfdebd">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a9a6b70bcca4e948950474a5a47dfdebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +156,43 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a58cbf1d12fceac765c86f59f15c89887" name="a58cbf1d12fceac765c86f59f15c89887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58cbf1d12fceac765c86f59f15c89887">&#9670;&#160;</a></span>getCoordinatesAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_player.html">player</a> getCoordinatesAt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_player.html">player</a>&#160;</td>
+          <td class="paramname"><em>thePlayer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a>&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Coordonées du joeur à la direction d. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thePlayer</td><td>Le joeur. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Les nouvelles coordonées du joeur à la direction d. </dd></dl>
+
+</div>
+</div>
 <a id="a66f402d03dad37a1f771cb4f1881d872" name="a66f402d03dad37a1f771cb4f1881d872"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a66f402d03dad37a1f771cb4f1881d872">&#9670;&#160;</a></span>getItemAt()</h2>
 
@@ -182,6 +228,33 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>'0' : S'il y a pas d'entité sinon l'entité. </dd></dl>
+
+</div>
+</div>
+<a id="aa132882e8d68b6ea449d29b69bb7417e" name="aa132882e8d68b6ea449d29b69bb7417e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa132882e8d68b6ea449d29b69bb7417e">&#9670;&#160;</a></span>isBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int isBox </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Est-ce que c'est un carton. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>Une entité. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 si oui 0 sinon </dd></dl>
 
 </div>
 </div>
@@ -226,6 +299,33 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>1 : si itemX ∈ [0, nombreLigne[ et itemY ∈ [0, nombreColonne[ sinon 0 </dd></dl>
+
+</div>
+</div>
+<a id="ac0560601ff57420760e38cd2333e4267" name="ac0560601ff57420760e38cd2333e4267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0560601ff57420760e38cd2333e4267">&#9670;&#160;</a></span>isNone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int isNone </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Est-ce que c'est un néant. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>Une entité. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 si oui 0 sinon </dd></dl>
 
 </div>
 </div>

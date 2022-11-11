@@ -55,11 +55,26 @@ char getItemAt(struct Grid *theGrid, enum Direction direction);
 */
 int isWall(char item);
 
+/**
+ * @brief Est-ce que c'est un carton.
+ * @param item Une entité.
+ * @return 1 si oui 0 sinon
+*/
 int isBox(char item);
 
+/**
+ * @brief Est-ce que c'est un néant.
+ * @param item Une entité.
+ * @return 1 si oui 0 sinon
+*/
 int isNone(char item);
 
 
+/**
+ * @brief Coordonées du joeur à la direction d.
+ * @param thePlayer Le joeur.
+ * @return Les nouvelles coordonées du joeur à la direction d.
+*/
 player getCoordinatesAt(player thePlayer, enum Direction direction);
 
 /**
