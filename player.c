@@ -104,6 +104,9 @@ void movePlayer(struct Grid *theGrid, enum Direction direction){
                 j = thePlayerNewPosition.y;
 
                 theGrid->game_grid[i][j] = PLAYER;
+
+                // On change la position du joeur, après le deplacement
+                theGrid->aPlayer = thePlayerNewPosition;
             }
         }
     }
