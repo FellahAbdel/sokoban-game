@@ -4,12 +4,16 @@
 
 /** 
 * @file grid.c
-* @brief A Documented file. 
-* Details.
+* @brief Code pour la grille. 
+* @author DIALLO Abdoul Aziz.
 */
 
 
-
+/**
+* @brief Alloue un tableau à 2D pour les entités du jeux.
+* @param numberOfRow Nombre de ligne de la grille
+* @param numberOfColumn Nombre de colonne de la grillej 
+*/
 CaseType** malloc2DCaseType(int numberOfRow, int numberOfColumn){
     CaseType** tabCaseType;
 
@@ -20,6 +24,10 @@ CaseType** malloc2DCaseType(int numberOfRow, int numberOfColumn){
     return tabCaseType;
 }
 
+/**
+* @brief Initiatialisation du niveau de jeux.
+* @param file_path le chemin du fichier.
+*/
 grid initLevel(const char* filePath){
     // Création de la grille
     grid gridInit = ((strGrid*)malloc(sizeof(strGrid)));
@@ -83,6 +91,10 @@ grid initLevel(const char* filePath){
     return gridInit;
 }
 
+/**
+ * @brief Affichage de la grille
+ * @param theGrid Un pointeur vers la grille.
+*/
 void display(grid theGrid){
     int numberRow = theGrid->row_number;
     int numberColumn = theGrid->column_number;

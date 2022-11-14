@@ -26,7 +26,7 @@ typedef struct Player{
 
 /**
 * @enum Direction player.h
-* Définit le sens de direction d'une case 
+* Définit le sens de direction d'une case.
 */
 typedef enum Direction {
     Top,         /// Haut
@@ -83,7 +83,7 @@ int isGoal(char item);
 
 /**
  * @brief Coordonées du joeur à la direction d.
- * @param thePlayer Le joeur.
+ * @param thePlayer Le joueur.
  * @return Les nouvelles coordonées du joeur à la direction d.
 */
 player getCoordinatesAt(player thePlayer, Direction direction);
