@@ -3,7 +3,7 @@
 
 /** 
 * @file player.h
-* @brief Le joueur.
+* @brief Header pour les joueurs.
 * Dans ce fichier, a été définis la structure player et une énumeration des 
 * des directions vers lesquelles le joeur se déplace. Le nom de la
 * la fonction principale est movePlyer. 
@@ -15,7 +15,7 @@ enum CaseType;
 
 
 /**
- * @struct Player player.h
+ * @struct Player
  * @brief Cette structure contient les informations 
  * concernant liées à la position du joueur
  */

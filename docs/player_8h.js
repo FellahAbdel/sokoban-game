@@ -1,6 +1,6 @@
 var player_8h =
 [
-    [ "Player", "struct_player.html", null ],
+    [ "Player", "struct_player.html", "struct_player" ],
     [ "Direction", "player_8h.html#a224b9163917ac32fc95a60d8c1eec3aa", [
       [ "Top", "player_8h.html#a224b9163917ac32fc95a60d8c1eec3aaa47321105d20c4efd6c573a6d829e1ad9", null ],
       [ "Right", "player_8h.html#a224b9163917ac32fc95a60d8c1eec3aaad48f7af8c070184f3774c8e85854eb66", null ],

@@ -23,7 +23,7 @@ typedef enum CaseType{
 }CaseType;
 
 /**
- * @struct Grid grid.h
+ * @struct Grid
  * @brief Cette structure contient les informations 
  * concernant la grille du jeu et son contenu
  */

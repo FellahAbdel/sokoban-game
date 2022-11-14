@@ -1,0 +1,6 @@
+<map id="grid.h" name="grid.h">
+<area shape="rect" id="node1" title="Les fonctions de gestion de la grille. Dans ce fichier, nous avons toutes les fonctions permettant de..." alt="" coords="88,5,143,31"/>
+<area shape="rect" id="node2" href="$grid_8c.html" title="Code pour la grille." alt="" coords="5,79,60,104"/>
+<area shape="rect" id="node3" href="$main_8c.html" title=" " alt="" coords="85,79,146,104"/>
+<area shape="rect" id="node4" href="$player_8c.html" title=" " alt="" coords="170,79,237,104"/>
+</map>

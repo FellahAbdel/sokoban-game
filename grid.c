@@ -10,6 +10,7 @@
 
 
 /**
+* @relatesalso Grid
 * @brief Alloue un tableau à 2D pour les entités du jeux.
 * @param numberOfRow Nombre de ligne de la grille
 * @param numberOfColumn Nombre de colonne de la grillej 
@@ -25,6 +26,7 @@ CaseType** malloc2DCaseType(int numberOfRow, int numberOfColumn){
 }
 
 /**
+* @relatesalso Grid
 * @brief Initiatialisation du niveau de jeux.
 * @param file_path le chemin du fichier.
 */
@@ -92,6 +94,7 @@ grid initLevel(const char* filePath){
 }
 
 /**
+ * @relatesalso Grid
  * @brief Affichage de la grille
  * @param theGrid Un pointeur vers la grille.
 */

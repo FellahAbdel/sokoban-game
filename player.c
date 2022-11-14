@@ -8,6 +8,7 @@
 
 
 /**
+* @relatesalso Player
 * @brief Teste s'il y a une entité au cordoonées itemX et itemY.
 * @param itemX coordonées i.
 * @param itemY coordonées j.
@@ -24,6 +25,7 @@ int isItemInGrid(struct Grid *theGrid, int itemX, int itemY){
 }
 
 /**
+ * @relatesalso Player
  * @brief Coordonées du joeur à la direction d.
  * @param thePlayer Le joueur.
  * @return Les nouvelles coordonées du joeur à la direction d.
@@ -43,6 +45,7 @@ player getCoordinatesAt(player thePlayer, Direction direction){
 }
 
 /**
+ * @relatesalso Player
 * @brief Permet de d'avoir l'entité à la direction d.
 * @param direction Direction vers laquelle le joueur se deplace.
 * @param theGrid Un pointeur vers la grille de jeux.
@@ -66,6 +69,7 @@ char getItemAt(struct Grid *theGrid, Direction direction){
 }
 
 /**
+ * @relatesalso Player
  * @brief Est-ce que c'est un mur.
  * @param item Une entité.
  * @return 1 si oui 0 sinon
@@ -75,6 +79,7 @@ int isWall(char item){
 }
 
 /**
+ * @relatesalso Player
  * @brief Est-ce que c'est un carton.
  * @param item Une entité.
  * @return 1 si oui 0 sinon
@@ -84,6 +89,7 @@ int isBox(char item){
 }
 
 /**
+ * @relatesalso Player
  * @brief Est-ce que c'est un néant.
  * @param item Une entité.
  * @return 1 si oui 0 sinon
@@ -93,6 +99,7 @@ int isNone(char item){
 }
 
 /**
+ * @relatesalso Player
  * @brief Est-ce que c'est une cible.
  * @param item Une entité.
  * @return 1 si oui 0 sinon
@@ -102,6 +109,7 @@ int isGoal(char item){
 }
 
 /**
+ * @relatesalso Player
  * @brief On y met au cordonnées en entré notre entité. 
  * @param theGrid Un pointeur vers la grille de jeux.
  * @param coordinates Coordonnées de la case où l'on met l'entité.
@@ -117,6 +125,7 @@ void setItemAt(struct Grid *theGrid, player coordinates, enum CaseType item){
 }
 
 /**
+ * @relatesalso Player
 * @brief Déplacement d'un joueur dans la grille.
 * @param direction Direction vers laquelle le joueur se deplace.
 */
