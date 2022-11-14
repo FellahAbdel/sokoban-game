@@ -4,8 +4,9 @@
 
 /** 
 * \file grid.h
-* \brief A Documented file.
-* Details.
+* \brief Les fonctions de gestion de la grille.
+* Dans ce fichier, nous avons toutes les fonctions permettant
+* de d'initier un niveau et d'afficher la grille de jeux. 
 */
 
 /**
@@ -53,8 +54,4 @@ CaseType** malloc2DCaseType(int numberOfRow, int numberOfColumn);
 */
 void display(grid theGrid);
 
-/**
-* @brief Déplacement d'un joueur dans la grille.
-* @param direction Direction vers laquelle le joueur se deplace.
-*/
 #endif

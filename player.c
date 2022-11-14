@@ -8,6 +8,7 @@
 
 
 /**
+* @fn
 * @brief Teste s'il y a une entité au cordoonées itemX et itemY.
 * @param itemX coordonées i.
 * @param itemY coordonées j.
@@ -38,6 +39,7 @@ player getCoordinatesAt(player thePlayer, Direction direction){
 }
 
 /**
+* @fn char getItemAt(struct Grid *theGrid, Direction direction).
 * @brief Permet de d'avoir l'entité à la direction d.
 * @param direction Direction vers laquelle le joueur se deplace.
 * @param theGrid Un pointeur vers la grille de jeux.

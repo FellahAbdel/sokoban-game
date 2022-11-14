@@ -1,14 +1,18 @@
 #ifndef PLAYER_HEADER
 #define PLAYER_HEADER
 
+/** 
+* @file player.h
+* @brief Le joueur.
+* Dans ce fichier, a été définis la structure player et une énumeration des 
+* des directions vers lesquelles le joeur se déplace. Le nom de la
+* la fonction principale est movePlyer. 
+*/
+
+// Pour eviter le problème de dependance circulaire.
 struct Grid;
 enum CaseType;
 
-/** 
-* @file player.h
-* @brief A Documented file.
-* Details.
-*/
 
 /**
  * @struct Player player.h
@@ -85,7 +89,7 @@ int isGoal(char item);
 player getCoordinatesAt(player thePlayer, Direction direction);
 
 /**
- * @brief 
+ * @brief On y met au cordonnées en entré notre entité. 
  * @param theGrid Un pointeur vers la grille de jeux.
  * @param coordinates Coordonnées de la case où l'on met l'entité.
  * @param item Entité à mettre. 
