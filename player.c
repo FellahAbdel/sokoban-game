@@ -8,7 +8,6 @@
 
 
 /**
-* @fn
 * @brief Teste s'il y a une entité au cordoonées itemX et itemY.
 * @param itemX coordonées i.
 * @param itemY coordonées j.
@@ -24,6 +23,11 @@ int isItemInGrid(struct Grid *theGrid, int itemX, int itemY){
     return 0;
 }
 
+/**
+ * @brief Coordonées du joeur à la direction d.
+ * @param thePlayer Le joueur.
+ * @return Les nouvelles coordonées du joeur à la direction d.
+*/
 player getCoordinatesAt(player thePlayer, Direction direction){
     if( direction == Top){
         thePlayer.x--;
@@ -39,7 +43,6 @@ player getCoordinatesAt(player thePlayer, Direction direction){
 }
 
 /**
-* @fn char getItemAt(struct Grid *theGrid, Direction direction).
 * @brief Permet de d'avoir l'entité à la direction d.
 * @param direction Direction vers laquelle le joueur se deplace.
 * @param theGrid Un pointeur vers la grille de jeux.
@@ -71,19 +74,40 @@ int isWall(char item){
     return item == WALL;
 }
 
+/**
+ * @brief Est-ce que c'est un carton.
+ * @param item Une entité.
+ * @return 1 si oui 0 sinon
+*/
 int isBox(char item){
     return item == BOX;
 }
 
+/**
+ * @brief Est-ce que c'est un néant.
+ * @param item Une entité.
+ * @return 1 si oui 0 sinon
+*/
 int isNone(char item){
     return item == NONE;
 }
 
+/**
+ * @brief Est-ce que c'est une cible.
+ * @param item Une entité.
+ * @return 1 si oui 0 sinon
+*/
 int isGoal(char item){
     return item == GOAL;
 }
 
-
+/**
+ * @brief On y met au cordonnées en entré notre entité. 
+ * @param theGrid Un pointeur vers la grille de jeux.
+ * @param coordinates Coordonnées de la case où l'on met l'entité.
+ * @param item Entité à mettre. 
+ * @return Rien (On modifie la grille).
+*/
 void setItemAt(struct Grid *theGrid, player coordinates, enum CaseType item){
     int i = coordinates.x;
     int j = coordinates.y;
@@ -92,6 +116,10 @@ void setItemAt(struct Grid *theGrid, player coordinates, enum CaseType item){
     return;
 }
 
+/**
+* @brief Déplacement d'un joueur dans la grille.
+* @param direction Direction vers laquelle le joueur se deplace.
+*/
 void movePlayer(struct Grid *theGrid, Direction direction){
     CaseType item = getItemAt(theGrid, direction);
     player thePlayer = theGrid->aPlayer;
