@@ -1,4 +1,0 @@
-<map id="grid.h" name="grid.h">
-<area shape="rect" id="node1" title="Les fonctions de gestion de la grille. Dans ce fichier, nous avons toutes les fonctions permettant de..." alt="" coords="11,5,66,31"/>
-<area shape="rect" id="node2" href="$player_8h.html" title="Header pour les joueurs. Dans ce fichier, a été définis la structure player et une énumeration des de..." alt="" coords="5,79,72,104"/>
-</map>

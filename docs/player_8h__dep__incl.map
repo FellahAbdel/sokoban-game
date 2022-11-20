@@ -1,7 +1,0 @@
-<map id="player.h" name="player.h">
-<area shape="rect" id="node1" title="Header pour les joueurs. Dans ce fichier, a été définis la structure player et une énumeration des de..." alt="" coords="85,5,152,31"/>
-<area shape="rect" id="node2" href="$grid_8h.html" title="Les fonctions de gestion de la grille. Dans ce fichier, nous avons toutes les fonctions permettant de..." alt="" coords="91,79,146,104"/>
-<area shape="rect" id="node4" href="$main_8c.html" title=" " alt="" coords="5,152,67,177"/>
-<area shape="rect" id="node5" href="$player_8c.html" title=" " alt="" coords="171,152,237,177"/>
-<area shape="rect" id="node3" href="$grid_8c.html" title="Code pour la grille." alt="" coords="91,152,146,177"/>
-</map>
