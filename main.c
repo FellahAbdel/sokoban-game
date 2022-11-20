@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include "grid.h"
 #include "player.h"
 
@@ -19,6 +20,8 @@ int main(void){
 
 	bool run = true;
 	while(run){
+        system("clear");
+        display(gameGrid);
 		char entry = fgetc(stdin);
 		switch(entry){
 			case 'q' :{
@@ -27,22 +30,22 @@ int main(void){
 			}
             case 'k' :{
                 movePlayer(gameGrid, Top);
-                display(gameGrid);
+                // display(gameGrid);
                 break;
             }
             case 'l' : {
                 movePlayer(gameGrid, Right);
-                display(gameGrid);
+                // display(gameGrid);
                 break;
             }
             case 'j' : {
                 movePlayer(gameGrid, Bottom);
-                display(gameGrid);
+                // display(gameGrid);
                 break;
             }
             case 'h' : {
                 movePlayer(gameGrid, Left);
-                display(gameGrid);
+                // display(gameGrid);
                 break;
             }
 		}
