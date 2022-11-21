@@ -28,5 +28,6 @@ Les consignes et l'énoncé se trouve à cette address [TP Sokoban](https://tech
     le joueur quitte la cible, elle y reste toujours.
 
     Solution :
+        Dans la deuxième partie.
 
 # KAYA RHABY PASCIA HERSHE & DIALLO ABDOUL AZIZ
