@@ -110,7 +110,11 @@ void display(grid theGrid){
     }
 }
 
-
+/**
+ * @relatesalso Grid
+ * @brief Libération de la mémoire
+ * @param theGrid Un pointeur vers la grille.
+*/
 void free2DCaseType(grid theGrid){
 
     for( int i = 0 ; i < theGrid->row_number ; i++){
