@@ -139,7 +139,7 @@ void movePlayer(struct Grid *theGrid, Direction direction){
         if(!isWall(item) && !isBox(item)){
             // Ce n'est ni un mûr, ni un carton.
             // Donc c'est soit le néant ou une cible.
-            if(isNone(item) || isGoal(item)){
+            if(isNone(item)){
                 // Si c'est le néant. 
                 // On deplace le joueur tranquillement.
 
