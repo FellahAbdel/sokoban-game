@@ -41,6 +41,8 @@ int main(void){
             }
 		}
 	}
+
+    // Libération de la mémoire.
     free2DCaseType(gameGrid);
     free(gameGrid);
 

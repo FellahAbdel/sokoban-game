@@ -29,10 +29,10 @@ typedef struct Player{
 * Définit le sens de direction d'une case.
 */
 typedef enum Direction {
-    Top,         /// Haut
-    Right,       /// Droite
-    Bottom,      /// Bas
-    Left         /// Gauche
+    Top,         ///< Haut
+    Right,       ///< Droite
+    Bottom,      ///< Bas
+    Left         ///< Gauche
 }Direction;
 
 int isItemInGrid(struct Grid *theGrid, int itemX, int itemY);
