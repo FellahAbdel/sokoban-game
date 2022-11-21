@@ -25,7 +25,7 @@ typedef enum CaseType{
 /**
  * @struct Grid
  * @brief Cette structure contient les informations 
- * concernant la grille du jeu et son contenu
+ * concernant la grille du jeu et son contenu.
  */
 typedef struct Grid{
 	enum CaseType** game_grid; ///< Tableau contenant les entités présents dans le jeu
@@ -38,6 +38,8 @@ typedef struct Grid{
 grid initLevel(const char* filePath);
 
 CaseType** malloc2DCaseType(int numberOfRow, int numberOfColumn);
+
+void free2DCaseType(grid theGrid);
 
 void display(grid theGrid);
 

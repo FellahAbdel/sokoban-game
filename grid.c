@@ -109,3 +109,14 @@ void display(grid theGrid){
         printf("\n");
     }
 }
+
+
+void free2DCaseType(grid theGrid){
+
+    for( int i = 0 ; i < theGrid->row_number ; i++){
+        free(theGrid->game_grid[i]);
+    }
+
+    free(theGrid->game_grid);
+    return;
+}

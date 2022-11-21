@@ -20,8 +20,8 @@ enum CaseType;
  * liées à la position du joueur.
  */
 typedef struct Player{
-    int x;
-    int y;
+    int x;       /// Position x du joueur
+    int y;       /// Position y du joueur
 }player;
 
 /**

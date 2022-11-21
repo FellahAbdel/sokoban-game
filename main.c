@@ -41,5 +41,9 @@ int main(void){
             }
 		}
 	}
+    free2DCaseType(gameGrid);
+    free(gameGrid);
+
+    return 0;
 }
 
