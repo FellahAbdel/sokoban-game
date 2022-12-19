@@ -1,5 +1,6 @@
 #ifndef GRID_HEADER
 #define GRID_HEADER
+
 #include "player.h"
 
 /** 
