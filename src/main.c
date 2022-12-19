@@ -11,7 +11,7 @@
 
 int main(void){
     
-    grid gameGrid = initLevel("./level1.txt");
+    grid gameGrid = initLevel("../level1.txt");
 
 	bool run = true;
 	while(run){

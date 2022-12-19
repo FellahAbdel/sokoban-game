@@ -1,30 +1,31 @@
 
-
-CC = gcc -g
-
-CFLAGS = -Wall -Wextra -W
+CFLAGS = -g -Wall -Wextra -W
 LDFLAGS = -lm
 
-SOURCES = $(wildcard *.c)  # SOURCES = main.c liste.c
-OBJETS = $(SOURCES:.c=.o)  # Recupère tous les fichiers dans sources, sauf
-						   # qu'il faut remplacer les .c par .o
-EXEC = prog
+CFLAGS = -g -Wall
+IFLAGS = -Iinclude
+OPATH = obj/
+CPATH = src/
 
-all : $(EXEC)
+vpath %.h include
+vpath %.c src
+vpath %.o obj
+vpath main bin
 
-# On genère les fichiers objets à partir des fichiers c
-# $@ : Nom de la cible qui provoque l'execution de la commande
-# $< : nom de la première dependance
-%.o : %.c 
-	$(CC) -o $@ -c $<
+main : main.o player.o grid.o
+	gcc $(CFLAGS) -o main $(OPATH)main.o $(OPATH)player.o $(OPATH)grid.o
+	mv $@ bin/
 
-	
-# On genère l'executable à partir de nos fichiers objets
-# $^ : Nom de toutes les dependance
-$(EXEC) : $(OBJETS)
-	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+main.o : main.c player.h grid.h
+player.o: player.c player.h
+grid.o: grid.c grid.h
 
-	rm -rf *.o
+%.o : 
+	gcc $(CFLAGS) -c $< $(IFLAGS)
+	mv $@ $(OPATH)
+
+clean : 
+	rm obj/* bin/*
 
 doc:
 	doxygen Doxyfile

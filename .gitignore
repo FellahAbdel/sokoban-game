@@ -4,3 +4,5 @@ Test
 .vscode
 *.bak
 docs/
+bin/
+obj/

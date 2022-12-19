@@ -42,7 +42,7 @@ grid initLevel(const char* filePath){
 	FILE* file = fopen(filePath, "r");
 	if(!file){
 		fprintf(stderr, "Error %s not found", filePath);
-        printf("erreur\n");
+        printf(" erreur.\n");
 		exit(-1);
 	}
 	char line[100] = {0};
