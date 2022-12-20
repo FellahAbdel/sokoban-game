@@ -56,7 +56,7 @@ grid initLevel(const char* filePath){
 	sscanf(line, "%d %d %d", &number_column, &number_row, &number_goals);
 
     // Initialisation de la taille    
-    gridInit->arrayGoal.taille = 0;
+    gridInit->arrayGoal.length = 0;
 
     // On initialise le nombre de ligne et de colonne dans 
     // notre grille de jeux
@@ -86,11 +86,11 @@ grid initLevel(const char* filePath){
 
             if(*buffer == GOAL){
                 current_goal++;
-                i = gridInit->arrayGoal.taille ;
+                i = gridInit->arrayGoal.length ;
                 goalCoord.x = current_row;
                 goalCoord.y = current_column;
-                gridInit->arrayGoal.tab[i] = goalCoord;
-                gridInit->arrayGoal.taille++;
+                gridInit->arrayGoal.array[i] = goalCoord;
+                gridInit->arrayGoal.length++;
             }
 
 			current_column += 1;

@@ -32,8 +32,8 @@ typedef struct Player{
  * dans la grille.
  */
 typedef struct GoalCoordinates{
-    player tab[MAX_GOAL];
-    int taille;
+    player array[MAX_GOAL];
+    int length;
 }goalCoordinates ;
 
 /**
