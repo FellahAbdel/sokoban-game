@@ -132,6 +132,8 @@ void setItemAt(struct Grid *theGrid, player coordinates, enum CaseType item){
 void movePlayer(struct Grid *theGrid, Direction direction){
     CaseType item = getItemAt(theGrid, direction);
     player thePlayer = theGrid->aPlayer;
+    player *arrayOfGoals = theGrid->arrayGoal.array;
+    int length = theGrid->arrayGoal.length;
     player thePlayerNewPosition;
 
     if(item != '0'){
@@ -148,8 +150,12 @@ void movePlayer(struct Grid *theGrid, Direction direction){
 
                 // si thePlayer est dans le tableau des coordonnées alors
                 // on met GOAL à la position (i, j).
-                // sinon on met NONE.
-                setItemAt(theGrid, thePlayer, NONE);
+                if(playerIsIn(thePlayer, arrayOfGoals, length)){
+                    setItemAt(theGrid, thePlayer, GOAL);
+                }else{
+                    // sinon on met NONE.
+                    setItemAt(theGrid, thePlayer, NONE);
+                }
 
                 // A la position (i + dx, j + dx) on met le joueur.
                 thePlayerNewPosition = getCoordinatesAt(thePlayer, direction);
@@ -170,7 +176,7 @@ void movePlayer(struct Grid *theGrid, Direction direction){
 bool playerIsIn(player p, player array[], int length){
     bool found = false;
     player playerInArr;
-    
+
     for(int i = 0 ; i < length && !found; i++){
         playerInArr = array[i];
         if(playerInArr.x == p.x && playerInArr.y == p.y){

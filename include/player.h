@@ -74,6 +74,6 @@ void setItemAt(struct Grid *theGrid, player coordinates, enum CaseType item);
 
 void movePlayer(struct Grid *theGrid, Direction direction);
 
-bool playerIsIn(player array[], int length);
+bool playerIsIn(player p, player array[], int length);
 
 #endif
