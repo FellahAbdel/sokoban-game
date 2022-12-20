@@ -1,5 +1,6 @@
 #ifndef PLAYER_HEADER
 #define PLAYER_HEADER
+#include <stdbool.h>
 
 #define MAX_GOAL 5   /// Nombre maximum de cibles.
 
@@ -72,5 +73,7 @@ void setItemAt(struct Grid *theGrid, player coordinates, enum CaseType item);
 
 
 void movePlayer(struct Grid *theGrid, Direction direction);
+
+bool playerIsIn(player array[], int length);
 
 #endif
