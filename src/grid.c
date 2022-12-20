@@ -54,7 +54,10 @@ grid initLevel(const char* filePath){
 	// on lit la première ligne du fichier
 	fgets(line, 100, file);
 	sscanf(line, "%d %d %d", &number_column, &number_row, &number_goals);
-    
+
+    // Initialisation de la taille    
+    gridInit->arrayGoal.taille = 0;
+
     // On initialise le nombre de ligne et de colonne dans 
     // notre grille de jeux
     gridInit->column_number = number_column;
@@ -65,6 +68,8 @@ grid initLevel(const char* filePath){
 	int current_row = 0;
 	int current_goal = 0;
 
+    int i ;
+    player goalCoord;
 	// On lit le fichier ligne par ligne jusqu'à la fin du fichier
 	while(fgets(line, 100, file) != NULL){
 		char* buffer = line;
@@ -81,6 +86,11 @@ grid initLevel(const char* filePath){
 
             if(*buffer == GOAL){
                 current_goal++;
+                i = gridInit->arrayGoal.taille ;
+                goalCoord.x = current_row;
+                goalCoord.y = current_column;
+                gridInit->arrayGoal.tab[i] = goalCoord;
+                gridInit->arrayGoal.taille++;
             }
 
 			current_column += 1;

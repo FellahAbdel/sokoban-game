@@ -12,6 +12,12 @@
 int main(void){
     
     grid gameGrid = initLevel("../level1.txt");
+    // player p;
+    // for(int i = 0 ; i < gameGrid->arrayGoal.taille ; i++){
+    //     p = gameGrid->arrayGoal.tab[i];
+    //     printf("(%d, %d)  ", p.x, p.y);
+    // }
+    // printf("\n");
 
 	bool run = true;
 	while(run){

@@ -137,9 +137,9 @@ void movePlayer(struct Grid *theGrid, Direction direction){
     if(item != '0'){
         // Nous sommes toujours dans la grille de jeux.
         if(!isWall(item) && !isBox(item)){
-            // Ce n'est ni un mûr, ni un carton.
-            // Donc c'est soit le néant ou une cible.
-            if(isNone(item)){
+            // Ce n'est pas un mûr.
+            // Donc c'est soit le néant, une cible ou un carton.
+            if(isNone(item) || isGoal(item)){
                 // Si c'est le néant. 
                 // On deplace le joueur tranquillement.
 
@@ -152,7 +152,12 @@ void movePlayer(struct Grid *theGrid, Direction direction){
 
                 // On change la position du joueur, après le deplacement
                 theGrid->aPlayer = thePlayerNewPosition;
-            }
+            }// else if(isBox(item)){
+            //     // Si c'est un carton, il faut vérifier qu'il y a un pos-
+            //     // sible deplacement à la direction (d + dx, d + dy) pour
+            //     // le carton. (cad qu'on reste toujours dans la grille et 
+            //     // qu'il y a le néant ou une cible à la direction d du carton)
+            // }
         }
     }
 }

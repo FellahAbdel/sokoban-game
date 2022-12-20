@@ -1,6 +1,8 @@
 #ifndef PLAYER_HEADER
 #define PLAYER_HEADER
 
+#define MAX_GOAL 5   /// Nombre maximum de cibles.
+
 /** 
 * @file player.h
 * @brief Header pour les joueurs.
@@ -23,6 +25,16 @@ typedef struct Player{
     int x;       /// Position x du joueur
     int y;       /// Position y du joueur
 }player;
+
+/**
+ * @struct GoalCoordinates
+ * @brief Cette structure contient les coordonnées de toutes les cibles
+ * dans la grille.
+ */
+typedef struct GoalCoordinates{
+    player tab[MAX_GOAL];
+    int taille;
+}goalCoordinates ;
 
 /**
 * @enum Direction player.h

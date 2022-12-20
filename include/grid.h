@@ -33,6 +33,7 @@ typedef struct Grid{
 	int column_number;          ///< Nombre de colonne de game_grid
 	int row_number;             ///< Nombre de ligne de game_grid
     player aPlayer;             ///< Un joueur
+    goalCoordinates arrayGoal;  ///< Un tableau de coordonnées des cibles
 }strGrid, *grid;
 
 
