@@ -10,10 +10,10 @@ CPATH = src/
 vpath %.h include
 vpath %.c src
 vpath %.o obj
-vpath main bin
+vpath prog bin
 
-main : main.o player.o grid.o
-	gcc $(CFLAGS) -o main $(OPATH)main.o $(OPATH)player.o $(OPATH)grid.o
+prog : main.o player.o grid.o
+	gcc $(CFLAGS) -o prog $(OPATH)main.o $(OPATH)player.o $(OPATH)grid.o
 	mv $@ bin/
 
 main.o : main.c player.h grid.h
@@ -32,3 +32,6 @@ doc:
 	
 archive:
 	tar -cf KAYA_RHABY_PASCIA_HERSCHE_DIALLO_ABDOUL_AZIZ.tar.gz *.c *.h makefile level1.txt README.md Doxyfile
+
+run:
+	cd ./bin/ && ./prog
