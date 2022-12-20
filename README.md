@@ -29,5 +29,11 @@ Les consignes et l'énoncé se trouve à cette address [TP Sokoban](https://tech
 
     Solution :
         Dans la deuxième partie.
+        Un tableau stockant toutes les positions des cibles a été rajouté dans la structure grid. Ceci a permit de faire le test suivant :
+            si la position actuelle du joueur est l'une des
+            position des cibles alors on met à cette position
+            le "GOAL" pour le deplacement
+
+            sinon on met "NONE".
 
 # KAYA RHABY PASCIA HERSHE & DIALLO ABDOUL AZIZ
