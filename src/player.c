@@ -68,6 +68,13 @@ char getItemAt(struct Grid *theGrid, Direction direction){
     return item;
 }
 
+CaseType getItemAfterBox(struct Grid *theGrid, player coordAfterBox){
+    int i = coordAfterBox.x;
+    int j = coordAfterBox.y;
+    
+    return theGrid->game_grid[i][j];
+}
+
 /**
  * @relatesalso Player
  * @brief Est-ce que c'est un mur.
@@ -138,7 +145,7 @@ void movePlayer(struct Grid *theGrid, Direction direction){
 
     if(item != '0'){
         // Nous sommes toujours dans la grille de jeux.
-        if(!isWall(item) && !isBox(item)){
+        if(!isWall(item)){
             // Ce n'est pas un mûr.
             // Donc c'est soit le néant, une cible ou un carton.
             if(isNone(item) || isGoal(item)){
@@ -163,16 +170,30 @@ void movePlayer(struct Grid *theGrid, Direction direction){
 
                 // On change la position du joueur, après le deplacement
                 theGrid->aPlayer = thePlayerNewPosition;
-            }// else if(isBox(item)){
-            //     // Si c'est un carton, il faut vérifier qu'il y a un pos-
-            //     // sible deplacement à la direction (d + dx, d + dy) pour
-            //     // le carton. (cad qu'on reste toujours dans la grille et 
-            //     // qu'il y a le néant ou une cible à la direction d du carton)
-            // }
+            } else if(isBox(item)){
+                // Si c'est un carton, il faut vérifier qu'il y a un pos-
+                // sible deplacement à la direction (d + dx, d + dy) pour
+                // le carton. (cad qu'on reste toujours dans la grille et 
+                // qu'il y a le néant ou une cible à la direction d du carton)
+
+                // En gros, voici ce qu'il faut faire :
+                // On cherche l'item à la direction d après le carton.
+                player boxCoord = getCoordinatesAt(thePlayer, direction);
+                player coordAfterBox = getCoordinatesAt(boxCoord, direction);
+                printf("(%d, %d)\n", coordAfterBox.x, coordAfterBox.y);
+             }
         }
     }
 }
 
+/**
+ * @relatesalso Player
+* @brief Test si le joeur est déjà sur l'une des positions des cibles.
+* @param p Le joueur.
+* @param array Le tableau contenant les coordonnées des cibles.
+* @param length Le nombre de cible.
+* @return Un boolean.
+*/
 bool playerIsIn(player p, player array[], int length){
     bool found = false;
     player playerInArr;
