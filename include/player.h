@@ -76,6 +76,6 @@ void movePlayer(struct Grid *theGrid, Direction direction);
 
 bool playerIsIn(player p, player array[], int length);
 
-CaseType getItemAfterBox(struct Grid *theGrid, player coordAfterBox);
+enum CaseType getItemAfterBox(struct Grid *theGrid, player coordAfterBox);
 
 #endif

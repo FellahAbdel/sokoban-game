@@ -68,10 +68,10 @@ char getItemAt(struct Grid *theGrid, Direction direction){
     return item;
 }
 
-CaseType getItemAfterBox(struct Grid *theGrid, player coordAfterBox){
+enum CaseType getItemAfterBox(struct Grid *theGrid, player coordAfterBox){
     int i = coordAfterBox.x;
     int j = coordAfterBox.y;
-    
+
     return theGrid->game_grid[i][j];
 }
 
@@ -180,7 +180,17 @@ void movePlayer(struct Grid *theGrid, Direction direction){
                 // On cherche l'item à la direction d après le carton.
                 player boxCoord = getCoordinatesAt(thePlayer, direction);
                 player coordAfterBox = getCoordinatesAt(boxCoord, direction);
-                printf("(%d, %d)\n", coordAfterBox.x, coordAfterBox.y);
+                CaseType itemAfterBox = getItemAfterBox(theGrid, coordAfterBox);
+                // si itemAfterBox n'est pas un mur alors on pousse le carton.
+                if(!isWall(itemAfterBox)){
+                    setItemAt(theGrid, coordAfterBox, BOX);
+                    setItemAt(theGrid, boxCoord, PLAYER);
+                    setItemAt(theGrid, thePlayer, NONE);
+
+                    // On change la nouvelle position du joueur
+                    theGrid->aPlayer = boxCoord;
+                }
+                // sinon on fait rien
              }
         }
     }
