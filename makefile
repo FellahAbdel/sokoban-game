@@ -1,37 +1,37 @@
+S_REP = src/
+H_REP = include/
+O_REP = obj/
+B_REP = bin/
+D_REP = doc/
 
-CFLAGS = -g -Wall -Wextra -W
+
+
+EXEC = $(B_REP)main
+SRC = $(wildcard $(S_REP)*.c)
+OBJ = $(SRC:$(S_REP)%.c=$(O_REP)%.o)
+
+CFLAGS = -g -Wall -Wextra 
 LDFLAGS = -lm
+IFLAGS = -I include
 
-CFLAGS = -g -Wall
-IFLAGS = -Iinclude
-OPATH = obj/
-CPATH = src/
+$(EXEC) : $(OBJ) | $(B_REP)
+	gcc $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
-vpath %.h include
-vpath %.c src
-vpath %.o obj
-vpath prog bin
+$(O_REP)%.o : $(S_REP)%.c | $(O_REP)
+	gcc -c $< -o $@ $(IFLAGS)
 
-prog : main.o player.o grid.o
-	gcc $(CFLAGS) -o prog $(OPATH)main.o $(OPATH)player.o $(OPATH)grid.o
-	mv $@ bin/
+$(B_REP) $(O_REP) :
 
-main.o : main.c player.h grid.h
-player.o: player.c player.h
-grid.o: grid.c grid.h
+	mkdir $@
 
-%.o : 
-	gcc $(CFLAGS) -c $< $(IFLAGS)
-	mv $@ $(OPATH)
+clean :
+	rm -r $(O_REP) $(B_REP) $(D_REP)
 
-clean : 
-	rm obj/* bin/*
-
-doc:
+doc : 
 	doxygen Doxyfile
-	
+
 archive:
 	tar -cf KAYA_RHABY_PASCIA_HERSCHE_DIALLO_ABDOUL_AZIZ.tar.gz *.c *.h makefile level1.txt README.md Doxyfile
 
 run:
-	cd ./bin/ && ./prog
+	cd ./bin/ && ./main
