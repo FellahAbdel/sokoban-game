@@ -242,7 +242,6 @@ void moveBox(struct Grid *theGrid, player p, Direction direction){
 
         checkGoalAndMove(theGrid, p);
 
-
         // On change la nouvelle position du joueur
         theGrid->aPlayer = boxCoord;
     }
