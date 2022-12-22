@@ -183,12 +183,16 @@ void movePlayer(struct Grid *theGrid, Direction direction){
                 CaseType itemAfterBox = getItemAfterBox(theGrid, coordAfterBox);
                 // si itemAfterBox n'est pas un mur alors on pousse le carton.
                 if(!isWall(itemAfterBox)){
+                    // Et si itemAfterBox est une cible, qu'est-ce qu'il faut
+                    // faire ?
                     setItemAt(theGrid, coordAfterBox, BOX);
                     setItemAt(theGrid, boxCoord, PLAYER);
                     setItemAt(theGrid, thePlayer, NONE);
 
                     // On change la nouvelle position du joueur
                     theGrid->aPlayer = boxCoord;
+
+                    refreshGoals(theGrid);
                 }
                 // sinon on fait rien
              }
@@ -216,4 +220,25 @@ bool playerIsIn(player p, player array[], int length){
     }
 
     return found;
+}
+
+void refreshGoals(struct Grid *theGrid){
+    player *arrayOfGoals = theGrid->arrayGoal.array;
+    int length = theGrid->arrayGoal.length;
+    player goalCoord;
+    enum CaseType item;
+    int j,k;
+    for(int i = 0 ; i < length ; i++){
+        goalCoord = arrayOfGoals[i];
+        j = goalCoord.x;
+        k = goalCoord.y;
+        
+        item = theGrid->game_grid[j][k];
+
+        if(isNone(item)){
+            setItemAt(theGrid, goalCoord, GOAL);
+        }
+    }
+
+    return ;
 }

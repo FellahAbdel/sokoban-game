@@ -120,6 +120,7 @@ void display(grid theGrid){
     }
 }
 
+
 /**
  * @relatesalso Grid
  * @brief Libération de la mémoire
