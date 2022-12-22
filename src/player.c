@@ -157,12 +157,7 @@ void movePlayer(struct Grid *theGrid, Direction direction){
 
                 // si thePlayer est dans le tableau des coordonnées alors
                 // on met GOAL à la position (i, j).
-                if(playerIsIn(thePlayer, arrayOfGoals, length)){
-                    setItemAt(theGrid, thePlayer, GOAL);
-                }else{
-                    // sinon on met NONE.
-                    setItemAt(theGrid, thePlayer, NONE);
-                }
+                checkGoalAndMove(theGrid, thePlayer);
 
                 // A la position (i + dx, j + dx) on met le joueur.
                 thePlayerNewPosition = getCoordinatesAt(thePlayer, direction);
@@ -171,35 +166,8 @@ void movePlayer(struct Grid *theGrid, Direction direction){
                 // On change la position du joueur, après le deplacement
                 theGrid->aPlayer = thePlayerNewPosition;
             } else if(isBox(item)){
-                // Si c'est un carton, il faut vérifier qu'il y a un pos-
-                // sible deplacement à la direction (d + dx, d + dy) pour
-                // le carton. (cad qu'on reste toujours dans la grille et 
-                // qu'il y a le néant ou une cible à la direction d du carton)
-
-                // En gros, voici ce qu'il faut faire :
-                // On cherche l'item à la direction d après le carton.
-                player boxCoord = getCoordinatesAt(thePlayer, direction);
-                player coordAfterBox = getCoordinatesAt(boxCoord, direction);
-                CaseType itemAfterBox = getItemAfterBox(theGrid, coordAfterBox);
-                // si itemAfterBox n'est pas un mur alors on pousse le carton.
-                if(!isWall(itemAfterBox)){
-                    // Et si itemAfterBox est une cible, qu'est-ce qu'il faut
-                    // faire ?
-                    setItemAt(theGrid, coordAfterBox, BOX);
-                    setItemAt(theGrid, boxCoord, PLAYER);
-
-                    if(playerIsIn(thePlayer, arrayOfGoals, length)){
-                        setItemAt(theGrid, thePlayer, GOAL);
-                    }else{
-                        // sinon on met NONE.
-                        setItemAt(theGrid, thePlayer, NONE);
-                    }
-
-                    // On change la nouvelle position du joueur
-                    theGrid->aPlayer = boxCoord;
-                }
-                // sinon on fait rien
-             }
+                moveBox(theGrid, thePlayer, direction);
+            }
         }
     }
 }
@@ -224,4 +192,45 @@ bool playerIsIn(player p, player array[], int length){
     }
 
     return found;
+}
+
+void checkGoalAndMove(struct Grid *theGrid, player p){
+    player *arrayOfGoals = theGrid->arrayGoal.array;
+    int length = theGrid->arrayGoal.length;
+
+    if(playerIsIn(p, arrayOfGoals, length)){
+        setItemAt(theGrid, p, GOAL);
+    }else{
+        // sinon on met NONE.
+        setItemAt(theGrid, p, NONE);
+    }
+
+    return;
+}
+
+void moveBox(struct Grid *theGrid, player p, Direction direction){
+    // Si c'est un carton, il faut vérifier qu'il y a un pos-
+    // sible deplacement à la direction (d + dx, d + dy) pour
+    // le carton. (cad qu'on reste toujours dans la grille et 
+    // qu'il y a le néant ou une cible à la direction d du carton)
+
+    // En gros, voici ce qu'il faut faire :
+    // On cherche l'item à la direction d après le carton.
+    player boxCoord = getCoordinatesAt(p, direction);
+    player coordAfterBox = getCoordinatesAt(boxCoord, direction);
+    CaseType itemAfterBox = getItemAfterBox(theGrid, coordAfterBox);
+    // si itemAfterBox n'est pas un mur alors on pousse le carton.
+    if(!isWall(itemAfterBox)){
+        // Et si itemAfterBox est une cible, qu'est-ce qu'il faut
+        // faire ?
+        setItemAt(theGrid, coordAfterBox, BOX);
+        setItemAt(theGrid, boxCoord, PLAYER);
+
+        checkGoalAndMove(theGrid, p);
+
+
+        // On change la nouvelle position du joueur
+        theGrid->aPlayer = boxCoord;
+    }
+    // sinon on fait rien    
 }

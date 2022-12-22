@@ -78,4 +78,8 @@ bool playerIsIn(player p, player array[], int length);
 
 enum CaseType getItemAfterBox(struct Grid *theGrid, player coordAfterBox);
 
+void checkGoalAndMove(struct Grid *theGrid, player p);
+
+void moveBox(struct Grid *theGrid, player p, Direction direction);
+
 #endif
