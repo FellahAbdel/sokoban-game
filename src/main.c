@@ -21,7 +21,7 @@ int main(void){
 
 	bool run = true;
 	while(run){
-        if(isGoalsCoveredByBox(gameGrid)){
+        if(areGoalsCoveredByBox(gameGrid)){
             run = false ;
         }
 

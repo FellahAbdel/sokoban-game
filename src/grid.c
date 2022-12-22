@@ -122,7 +122,7 @@ void display(grid theGrid){
     }
 }
 
-bool isGoalsCoveredByBox(grid theGrid){
+bool areGoalsCoveredByBox(grid theGrid){
     return theGrid->totalGoals == theGrid->countGoals;
 }
 
