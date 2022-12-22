@@ -224,7 +224,7 @@ void checkGoalAndMove(struct Grid *theGrid, player p){
 * @return Rien.
 */
 void moveBox(struct Grid *theGrid, player p, Direction direction){
-    player *arrayOfPlayer = theGrid->arrayGoal.array ;
+    player *arrayOfGoals = theGrid->arrayGoal.array ;
     int len = theGrid->arrayGoal.length ;
     // Si c'est un carton, il faut vérifier qu'il y a un pos-
     // sible deplacement à la direction (d + dx, d + dy) pour
@@ -245,12 +245,12 @@ void moveBox(struct Grid *theGrid, player p, Direction direction){
         setItemAt(theGrid, boxCoord, PLAYER);
 
         // coordAfterBox est maintenant le couple de coordonnée du carton.
-        if(playerIsIn(coordAfterBox, arrayOfPlayer, len)){
+        if(playerIsIn(coordAfterBox, arrayOfGoals, len)){
             theGrid->countGoals++;
         }
         
         // boxCoord est mtn le couple de coordonnée du joueur.
-        if (playerIsIn(boxCoord, arrayOfPlayer, len)){
+        if (playerIsIn(boxCoord, arrayOfGoals, len)){
             theGrid->countGoals--;
         }
 
