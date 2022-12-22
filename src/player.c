@@ -145,7 +145,7 @@ void movePlayer(struct Grid *theGrid, Direction direction){
         // Nous sommes toujours dans la grille de jeux.
         if(!isWall(item)){
             // Ce n'est pas un mûr.
-            // Donc c'est soit le néant, une cible ou un carton.
+            // Donc c'est soit le néant, une cible.
             if(isNone(item) || isGoal(item)){
                 // Si c'est le néant. 
                 // On deplace le joueur tranquillement.
@@ -164,6 +164,7 @@ void movePlayer(struct Grid *theGrid, Direction direction){
                 // On change la position du joueur, après le deplacement
                 theGrid->aPlayer = thePlayerNewPosition;
             } else if(isBox(item)){
+                // C'est un carton, il faut le faire le bouger
                 moveBox(theGrid, thePlayer, direction);
             }
         }
@@ -223,6 +224,8 @@ void checkGoalAndMove(struct Grid *theGrid, player p){
 * @return Rien.
 */
 void moveBox(struct Grid *theGrid, player p, Direction direction){
+    player *arrayOfPlayer = theGrid->arrayGoal.array ;
+    int len = theGrid->arrayGoal.length ;
     // Si c'est un carton, il faut vérifier qu'il y a un pos-
     // sible deplacement à la direction (d + dx, d + dy) pour
     // le carton. (cad qu'on reste toujours dans la grille et 
@@ -233,15 +236,26 @@ void moveBox(struct Grid *theGrid, player p, Direction direction){
     player boxCoord = getCoordinatesAt(p, direction);
     player coordAfterBox = getCoordinatesAt(boxCoord, direction);
     CaseType itemAfterBox = getItemAfterBox(theGrid, coordAfterBox);
-    // si itemAfterBox n'est pas un mur alors on pousse le carton.
+    // si itemAfterBox n'est pas un mur, ni un autre carotn alors
+    // on pousse le carton.
     if(!isWall(itemAfterBox) && !isBox(itemAfterBox)){
         // Et si itemAfterBox est une cible, qu'est-ce qu'il faut
         // faire ?
         setItemAt(theGrid, coordAfterBox, BOX);
         setItemAt(theGrid, boxCoord, PLAYER);
 
-        checkGoalAndMove(theGrid, p);
+        // coordAfterBox est maintenant le couple de coordonnée du carton.
+        if(playerIsIn(coordAfterBox, arrayOfPlayer, len)){
+            theGrid->countGoals++;
+        }
+        
+        // boxCoord est mtn le couple de coordonnée du joueur.
+        if (playerIsIn(boxCoord, arrayOfPlayer, len)){
+            theGrid->countGoals--;
+        }
 
+        checkGoalAndMove(theGrid, p);
+        
         // On change la nouvelle position du joueur
         theGrid->aPlayer = boxCoord;
     }
