@@ -187,12 +187,16 @@ void movePlayer(struct Grid *theGrid, Direction direction){
                     // faire ?
                     setItemAt(theGrid, coordAfterBox, BOX);
                     setItemAt(theGrid, boxCoord, PLAYER);
-                    setItemAt(theGrid, thePlayer, NONE);
+
+                    if(playerIsIn(thePlayer, arrayOfGoals, length)){
+                        setItemAt(theGrid, thePlayer, GOAL);
+                    }else{
+                        // sinon on met NONE.
+                        setItemAt(theGrid, thePlayer, NONE);
+                    }
 
                     // On change la nouvelle position du joueur
                     theGrid->aPlayer = boxCoord;
-
-                    refreshGoals(theGrid);
                 }
                 // sinon on fait rien
              }
