@@ -122,6 +122,12 @@ void display(grid theGrid){
     }
 }
 
+/**
+* @relatesalso Grid
+* @brief Teste si toutes les cibles ont été couvertes.
+* @param theGrid La grille de jeux.
+* @return Boolean.
+*/
 bool areGoalsCoveredByBox(grid theGrid){
     return theGrid->totalGoals == theGrid->countGoals;
 }
