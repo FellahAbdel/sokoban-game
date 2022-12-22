@@ -234,7 +234,7 @@ void moveBox(struct Grid *theGrid, player p, Direction direction){
     player coordAfterBox = getCoordinatesAt(boxCoord, direction);
     CaseType itemAfterBox = getItemAfterBox(theGrid, coordAfterBox);
     // si itemAfterBox n'est pas un mur alors on pousse le carton.
-    if(!isWall(itemAfterBox)){
+    if(!isWall(itemAfterBox) && !isBox(itemAfterBox)){
         // Et si itemAfterBox est une cible, qu'est-ce qu'il faut
         // faire ?
         setItemAt(theGrid, coordAfterBox, BOX);
