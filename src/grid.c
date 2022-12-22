@@ -62,6 +62,7 @@ grid initLevel(const char* filePath){
     // notre grille de jeux
     gridInit->column_number = number_column;
     gridInit->row_number = number_row;
+    gridInit->countGoals = 0;
 
     gridInit->game_grid = malloc2DCaseType(number_row, number_column);
 
@@ -99,6 +100,7 @@ grid initLevel(const char* filePath){
 		current_row += 1;
 	}
 	// fermeture du fichier
+    gridInit->totalGoals = current_goal;
 	fclose(file);
     return gridInit;
 }
