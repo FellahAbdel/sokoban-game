@@ -21,6 +21,10 @@ int main(void){
 
 	bool run = true;
 	while(run){
+        if(isGoalsCoveredByBox(gameGrid)){
+            run = false ;
+        }
+
         system("clear");
         display(gameGrid);
 		char entry = fgetc(stdin);
@@ -31,6 +35,7 @@ int main(void){
 			}
             case 'k' :{
                 movePlayer(gameGrid, Top);
+                getchar();
                 break;
             }
             case 'l' : {
@@ -46,6 +51,7 @@ int main(void){
                 break;
             }
 		}
+
 	}
 
     // Libération de la mémoire.

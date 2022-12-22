@@ -47,4 +47,6 @@ void free2DCaseType(grid theGrid);
 
 void display(grid theGrid);
 
+bool isGoalsCoveredByBox(grid theGrid);
+
 #endif

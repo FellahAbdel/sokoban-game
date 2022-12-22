@@ -122,6 +122,10 @@ void display(grid theGrid){
     }
 }
 
+bool isGoalsCoveredByBox(grid theGrid){
+    return theGrid->totalGoals == theGrid->countGoals;
+}
+
 
 /**
  * @relatesalso Grid

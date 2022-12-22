@@ -36,4 +36,11 @@ Les consignes et l'énoncé se trouve à cette address [TP Sokoban](https://tech
 
             sinon on met "NONE".
 
+# 4 ème difficulté :
+
+    Dès que je suis sur le point de placer le dernier carton sur la dernière cible le jeux se termine avant de le placer.
+
+    Solution :
+        J'ai mis le test juste après le while.
+
 # KAYA RHABY PASCIA HERSHE & DIALLO ABDOUL AZIZ
