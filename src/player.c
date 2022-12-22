@@ -139,8 +139,6 @@ void setItemAt(struct Grid *theGrid, player coordinates, enum CaseType item){
 void movePlayer(struct Grid *theGrid, Direction direction){
     CaseType item = getItemAt(theGrid, direction);
     player thePlayer = theGrid->aPlayer;
-    player *arrayOfGoals = theGrid->arrayGoal.array;
-    int length = theGrid->arrayGoal.length;
     player thePlayerNewPosition;
 
     if(item != '0'){
@@ -194,6 +192,14 @@ bool playerIsIn(player p, player array[], int length){
     return found;
 }
 
+/**
+* @relatesalso Player
+* @brief Si le joueur est sur l'une des cibles on met le "GOAL" une fois 
+* qu'il se deplace.
+* @param p Le joueur.
+* @param theGrid La grille de jeux.
+* @return Rien.
+*/
 void checkGoalAndMove(struct Grid *theGrid, player p){
     player *arrayOfGoals = theGrid->arrayGoal.array;
     int length = theGrid->arrayGoal.length;
@@ -208,6 +214,14 @@ void checkGoalAndMove(struct Grid *theGrid, player p){
     return;
 }
 
+/**
+ * @relatesalso Player
+* @brief Depalcement du carton.
+* @param p Le joueur.
+* @param theGrid La grille de jeux.
+* @param direction Direction de deplacement du carton.
+* @return Rien.
+*/
 void moveBox(struct Grid *theGrid, player p, Direction direction){
     // Si c'est un carton, il faut vérifier qu'il y a un pos-
     // sible deplacement à la direction (d + dx, d + dy) pour
