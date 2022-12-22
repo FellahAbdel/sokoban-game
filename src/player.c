@@ -225,24 +225,3 @@ bool playerIsIn(player p, player array[], int length){
 
     return found;
 }
-
-void refreshGoals(struct Grid *theGrid){
-    player *arrayOfGoals = theGrid->arrayGoal.array;
-    int length = theGrid->arrayGoal.length;
-    player goalCoord;
-    enum CaseType item;
-    int j,k;
-    for(int i = 0 ; i < length ; i++){
-        goalCoord = arrayOfGoals[i];
-        j = goalCoord.x;
-        k = goalCoord.y;
-        
-        item = theGrid->game_grid[j][k];
-
-        if(isNone(item)){
-            setItemAt(theGrid, goalCoord, GOAL);
-        }
-    }
-
-    return ;
-}
