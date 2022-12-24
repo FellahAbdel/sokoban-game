@@ -21,6 +21,13 @@ int main(void){
         .h = 50
     };
 
+    SDL_Rect rect1 = {
+        .x = 50,
+        .y = 0,
+        .w = 50,
+        .h = 50
+    };
+
     SDL_Color rectColor = {
         .r = 255,
         .g = 0,
@@ -28,9 +35,12 @@ int main(void){
         .a = 255
     };
 
-    sdlDrawRect(rect , rectColor);
-    
+    // sdlDrawRect(rect , rectColor);
+    // sdlDrawRect(rect1 , rectColor);
+
     grid gameGrid = initLevel("../level1.txt");
+
+    displaySdl2(gameGrid);
 
 
 	bool run = true;
@@ -39,7 +49,7 @@ int main(void){
             run = false ;
         }
 
-        system("clear");
+        // system("clear");
         display(gameGrid);
 		char entry = fgetc(stdin);
 		switch(entry){

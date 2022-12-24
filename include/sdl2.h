@@ -30,4 +30,6 @@ void sdl_quit();
 
 void displaySdl2(struct Grid *theGrid);
 
+void colorPalette();
+
 void sdlDrawRect(SDL_Rect rect, SDL_Color rectColor);
