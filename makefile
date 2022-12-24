@@ -4,28 +4,28 @@ O_REP = obj/
 B_REP = bin/
 D_REP = doc/
 
-
+LD_LIBRARY_PATH =/../install_dir/lib
 
 EXEC = $(B_REP)main
 SRC = $(wildcard $(S_REP)*.c)
 OBJ = $(SRC:$(S_REP)%.c=$(O_REP)%.o)
 
 CFLAGS = -g -Wall -Wextra 
-LDFLAGS = -lm
+LDFLAGS =  -lm -L/../install_dir -l SDL2 -Wl,-rpath=$(LD_LIBRARY_PATH)
+
 IFLAGS = -I include
 
 $(EXEC) : $(OBJ) | $(B_REP)
-	gcc $(CFLAGS) -o $@ $^ $(LDFLAGS)
+	gcc $(CFLAGS) -o $@ $^  $(LDFLAGS)
 
 $(O_REP)%.o : $(S_REP)%.c | $(O_REP)
 	gcc -c $< -o $@ $(IFLAGS)
 
-$(B_REP) $(O_REP) :
-
+$(B_REP) :
 	mkdir $@
 
 clean :
-	rm -r $(O_REP) $(B_REP) $(D_REP)
+	rm -r $(O_REP)* $(B_REP) 2> /dev/null
 
 doc : 
 	doxygen Doxyfile
@@ -35,3 +35,6 @@ archive:
 
 run:
 	cd ./bin/ && ./main
+
+config : 
+	cd SDL2 && ./configure --prefix=${PWD}/../install_dir && make install -j6
