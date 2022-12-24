@@ -1,6 +1,7 @@
 #pragma once
 #include <SDL2/SDL.h>
 #include "grid.h"
+#include "player.h"
 
 typedef struct SDLContext {
   SDL_Window *window;

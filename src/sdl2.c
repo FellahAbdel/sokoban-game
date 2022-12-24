@@ -79,6 +79,7 @@ void displaySdl2(struct Grid *theGrid){
     // cell.y = cellWidth ;
     int newX = 0 ;
     int newY = 0 ;
+    char item;
 
     for(int i = 0 ; i < rowNumber ; i++){
         for(int j = 0 ; j < colNumber ; j++){
@@ -86,11 +87,26 @@ void displaySdl2(struct Grid *theGrid){
             newY = i*cellHeight ;
             cell.x = newX ;
             cell.y = newY ;
+
+            item = theGrid->game_grid[i][j];
+            if(isBox(item)){
+                rectColor = palette->colors[0];
+            } else if( isGoal(item)){
+                rectColor = palette->colors[1] ;
+            } else if(isNone(item)){
+                rectColor = palette->colors[3] ;
+            }else if(isWall(item)){
+                rectColor = palette->colors[2] ;
+            }else {
+                rectColor = palette->colors[4] ;
+            }
+
             sdlDrawRect(cell, rectColor);
         }
     }
 
     SDL_RenderPresent(context.renderer); // On affiche tout
+    SDL_FreePalette(palette);  // On n'ettoie la palette
     return ;
 }
 
