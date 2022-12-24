@@ -3,8 +3,8 @@
 SDLContext context; /// Une variable globale.
 
 void sdl_init() {
-    int const width = 1280;
-    int const height = 720;
+    int const width = 700;
+    int const height = 600;
 
     context = (SDLContext){NULL, NULL, .width = 0, .height = 0};
 
@@ -14,7 +14,7 @@ void sdl_init() {
 
     SDL_Window *window =
         SDL_CreateWindow("Sokoban", SDL_WINDOWPOS_CENTERED,
-            SDL_WINDOWPOS_CENTERED, 1280, 720, SDL_WINDOW_SHOWN);
+            SDL_WINDOWPOS_CENTERED, 700, 600, SDL_WINDOW_SHOWN);
 
     if (!window) {
         return;
@@ -37,21 +37,25 @@ void sdl_quit() {
     SDL_Quit();
 }
 
-void sdlDrawRect(){
+void displaySdl2(struct Grid *theGrid){
+    
+}
+
+void sdlDrawRect(SDL_Rect rect, SDL_Color rectColor){
     
     SDL_SetRenderDrawColor(context.renderer, 126, 126, 126, 255); // couleur grise
     SDL_RenderClear(context.renderer); // On dessine toute la fenêtre en gris
 
-    SDL_Rect rect = {    
-                    .x = 0,
-                    .y = 0,
-                    .w = 50,
-                    .h = 50
-    };
-
-    SDL_SetRenderDrawColor(context.renderer, 255, 0, 0, 255); // on choisit la couleur rouge
+    int r = rectColor.r;
+    int g = rectColor.g;
+    int b = rectColor.b;
+    int a = rectColor.a;
+     
+    SDL_SetRenderDrawColor(context.renderer, r, g, b, a); // on choisit la couleur rouge
     SDL_RenderFillRect(context.renderer, &rect); // On dessine le rectangle
     SDL_RenderPresent(context.renderer); // On affiche tout
 
     SDL_Delay(1000);
 }
+
+

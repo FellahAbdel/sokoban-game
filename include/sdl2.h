@@ -1,5 +1,6 @@
 #pragma once
 #include <SDL2/SDL.h>
+#include "grid.h"
 
 typedef struct SDLContext {
   SDL_Window *window;
@@ -27,4 +28,6 @@ void sdl_init();
  */
 void sdl_quit();
 
-void sdlDrawRect();
+void displaySdl2(struct Grid *theGrid);
+
+void sdlDrawRect(SDL_Rect rect, SDL_Color rectColor);
