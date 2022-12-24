@@ -8,6 +8,7 @@ typedef struct SDLContext {
   int height;
 } SDLContext;
 
+
 /* @brief 
  * Initialise une variable global `context` de type SDLContext
  *
@@ -25,3 +26,5 @@ void sdl_init();
  * nettoie la variable global context 
  */
 void sdl_quit();
+
+void sdlDrawRect();

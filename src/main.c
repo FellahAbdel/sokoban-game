@@ -13,6 +13,7 @@
 int main(void){
     
     sdl_init();
+    sdlDrawRect();
     grid gameGrid = initLevel("../level1.txt");
 
 

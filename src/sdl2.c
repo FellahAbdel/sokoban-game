@@ -1,6 +1,6 @@
 #include "sdl2.h"
 
-SDLContext context ;
+SDLContext context; /// Une variable globale.
 
 void sdl_init() {
     int const width = 1280;
@@ -35,4 +35,23 @@ void sdl_quit() {
     context.renderer = NULL;
     
     SDL_Quit();
+}
+
+void sdlDrawRect(){
+    
+    SDL_SetRenderDrawColor(context.renderer, 126, 126, 126, 255); // couleur grise
+    SDL_RenderClear(context.renderer); // On dessine toute la fenêtre en gris
+
+    SDL_Rect rect = {    
+                    .x = 0,
+                    .y = 0,
+                    .w = 50,
+                    .h = 50
+    };
+
+    SDL_SetRenderDrawColor(context.renderer, 255, 0, 0, 255); // on choisit la couleur rouge
+    SDL_RenderFillRect(context.renderer, &rect); // On dessine le rectangle
+    SDL_RenderPresent(context.renderer); // On affiche tout
+
+    SDL_Delay(1000);
 }
