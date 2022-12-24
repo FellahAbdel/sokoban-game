@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "grid.h"
 #include "player.h"
+#include "sdl2.h"
 
 /**
  * \file main.c
@@ -11,13 +12,9 @@
 
 int main(void){
     
+    sdl_init();
     grid gameGrid = initLevel("../level1.txt");
-    // player p;
-    // for(int i = 0 ; i < gameGrid->arrayGoal.taille ; i++){
-    //     p = gameGrid->arrayGoal.tab[i];
-    //     printf("(%d, %d)  ", p.x, p.y);
-    // }
-    // printf("\n");
+
 
 	bool run = true;
 	while(run){
@@ -58,6 +55,7 @@ int main(void){
     free2DCaseType(gameGrid);
     free(gameGrid);
 
+    sdl_quit();
     return 0;
 }
 
