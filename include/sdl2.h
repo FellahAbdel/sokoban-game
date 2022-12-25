@@ -17,6 +17,18 @@ typedef struct SDLContext {
   int height;
 } SDLContext;
 
+/**
+* @enum Event sdl2.h
+* Définit le type d'un evenement.
+*/
+typedef enum Event {
+    Quit,  ///< Quitter
+    Left,  ///< Gauche
+    Right, ///< Droit
+    Up,    ///< En haut
+    Down,  ///< En bas
+    None   ///< Rien
+}Event;
 
 /* @brief 
  * Initialise une variable global `context` de type SDLContext
@@ -41,3 +53,5 @@ void displaySdl2(struct Grid *theGrid);
 void colorPalette();
 
 void sdlDrawRect(SDL_Rect rect, SDL_Color rectColor);
+
+
