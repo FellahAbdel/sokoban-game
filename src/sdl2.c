@@ -1,7 +1,7 @@
 #include "sdl2.h"
 
 SDLContext context; /// Une variable globale.
-SDL_Palette *palette ;
+SDL_Palette *palette ; /// Une variable globale
 
 void sdl_init() {
     int const width = 700;
@@ -39,7 +39,9 @@ void sdl_quit() {
 }
 
 void displaySdl2(struct Grid *theGrid){
+    // Initialisation de palette de couleur
     colorPalette();
+
     SDL_SetRenderDrawColor(context.renderer, 126, 126, 126, 255); // couleur grise
     SDL_RenderClear(context.renderer); // On dessine toute la fenêtre en gris
     
@@ -54,12 +56,6 @@ void displaySdl2(struct Grid *theGrid){
     int cellWidth = screenWidth / colNumber ;
     int cellHeight = screenHeight / rowNumber ;
 
-
-
-    printf("screenWidth = %d screenHeight = %d\n", screenWidth, screenHeight);
-    printf("rowNumber = %d colNumber = %d\n", rowNumber, colNumber);
-    printf("cellWidth = %d cellHeight = %d\n", cellWidth, cellHeight);
-
     SDL_Rect cell = {
         .x = 0,
         .y = 0,
@@ -67,20 +63,10 @@ void displaySdl2(struct Grid *theGrid){
         .w = cellWidth
     };
 
-    SDL_Color rectColor = {
-        .r = 255,
-        .g = 0,
-        .b = 0,
-        .a = 255
-    };
-
-    // sdlDrawRect(cell, rectColor);
-    // cell.x = cellHeight ;
-    // cell.y = cellWidth ;
+    SDL_Color rectColor;
     int newX = 0 ;
     int newY = 0 ;
-    char item;
-
+    char item ;
     for(int i = 0 ; i < rowNumber ; i++){
         for(int j = 0 ; j < colNumber ; j++){
             newX = j*cellWidth ;
