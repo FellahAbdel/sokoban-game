@@ -54,4 +54,6 @@ void colorPalette();
 
 void sdlDrawRect(SDL_Rect rect, SDL_Color rectColor);
 
+Event eventSdl2();
+
 

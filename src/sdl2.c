@@ -175,4 +175,37 @@ void colorPalette(){
     };
 }
 
+Event eventSdl2(){
+    Event eventType ;
+
+    SDL_Event ev;
+    SDL_WaitEvent(&ev);
+    switch(ev.type){
+        case SDL_QUIT :
+            eventType = Quit;
+            break;
+        case SDL_KEYUP :
+            switch(ev.key.keysym.sym){
+                case SDLK_UP :
+                    eventType = Up ;
+                    break;
+                case SDLK_DOWN :
+                    eventType = Down;
+                    break;
+                case SDLK_LEFT :
+                    eventType = Left;
+                    break;
+                case SDLK_RIGHT :
+                    eventType = Right ;
+                default :
+                    break;
+            }
+        default :
+            eventType = None ;
+            break;
+    }
+
+    return eventType ;
+}
+
 
