@@ -107,8 +107,9 @@ void displaySdl2(struct Grid *theGrid){
 
 /**
  * @relatesalso Grid
- * @brief Affiche du niveau de jeu sur la SDL.
- * @param theGrid La grille de jeux.
+ * @brief On dessine juste un rectangle.
+ * @param rect Le rectangle. 
+ * @param rectColor La couleur du rectangle à dessiner. 
  * @return Rien
  */
 void sdlDrawRect(SDL_Rect rect, SDL_Color rectColor){
@@ -123,8 +124,6 @@ void sdlDrawRect(SDL_Rect rect, SDL_Color rectColor){
      
     SDL_SetRenderDrawColor(context.renderer, r, g, b, a); // on choisit la couleur rouge
     SDL_RenderFillRect(context.renderer, &rect); // On dessine le rectangle
-
-    // SDL_RenderPresent(context.renderer); // On affiche tout
 }
 
 /**
