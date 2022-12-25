@@ -3,6 +3,13 @@
 #include "grid.h"
 #include "player.h"
 
+/** 
+* @file sdl2.h
+* @brief Header pour la SDL2.
+* Dans ce fichier, a été définis la structure SDLContext contenant la fenêtre,
+* le rendu, la hauteur et la largeur de l'écran. 
+*/
+
 typedef struct SDLContext {
   SDL_Window *window;
   SDL_Renderer *renderer;

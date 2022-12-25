@@ -1,5 +1,9 @@
 #include "sdl2.h"
 
+/**
+ * @file sdl2.c
+*/
+
 SDLContext context; /// Une variable globale.
 SDL_Palette *palette ; /// Une variable globale
 
@@ -29,7 +33,6 @@ void sdl_init() {
 }
 
 void sdl_quit() {
-
     SDL_DestroyWindow(context.window);
     SDL_DestroyRenderer(context.renderer);
     context.window = NULL;
@@ -38,6 +41,12 @@ void sdl_quit() {
     SDL_Quit();
 }
 
+/**
+ * @relatesalso Grid
+ * @brief Affiche du niveau de jeu sur la SDL.
+ * @param theGrid La grille de jeux.
+ * @return Rien
+ */
 void displaySdl2(struct Grid *theGrid){
     // Initialisation de palette de couleur
     colorPalette();
@@ -96,6 +105,12 @@ void displaySdl2(struct Grid *theGrid){
     return ;
 }
 
+/**
+ * @relatesalso Grid
+ * @brief Affiche du niveau de jeu sur la SDL.
+ * @param theGrid La grille de jeux.
+ * @return Rien
+ */
 void sdlDrawRect(SDL_Rect rect, SDL_Color rectColor){
     
     // SDL_SetRenderDrawColor(context.renderer, 126, 126, 126, 255); // couleur grise
@@ -112,6 +127,10 @@ void sdlDrawRect(SDL_Rect rect, SDL_Color rectColor){
     // SDL_RenderPresent(context.renderer); // On affiche tout
 }
 
+/**
+ * @brief Gestion de cinqs couleur pour le jeux.
+ * @return Rien
+ */
 void colorPalette(){
     palette = SDL_AllocPalette(5);
 
@@ -150,7 +169,6 @@ void colorPalette(){
     };
 
     SDL_Color arrayColors[5] = {navy, orange, yellow, brown, teal};
-    // palette->colors = arrayColors ;
 
     if(SDL_SetPaletteColors(palette, arrayColors, 0, 5) != 0){
         SDL_Log("Erreur : Setting colors > %s", SDL_GetError());
