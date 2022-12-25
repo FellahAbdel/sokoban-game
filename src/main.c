@@ -14,30 +14,6 @@ int main(void){
     
     sdl_init();
 
-    SDL_Rect rect = {
-        .x = 0,
-        .y = 0,
-        .w = 50,
-        .h = 50
-    };
-
-    SDL_Rect rect1 = {
-        .x = 50,
-        .y = 0,
-        .w = 50,
-        .h = 50
-    };
-
-    SDL_Color rectColor = {
-        .r = 255,
-        .g = 0,
-        .b = 0,
-        .a = 255
-    };
-
-    // sdlDrawRect(rect , rectColor);
-    // sdlDrawRect(rect1 , rectColor);
-
     grid gameGrid = initLevel("../level1.txt");
 
     displaySdl2(gameGrid);
