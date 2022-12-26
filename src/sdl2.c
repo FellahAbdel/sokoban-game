@@ -193,15 +193,15 @@ Event eventSdl2(){
                     eventType = Down;
                     break;
                 case SDLK_LEFT :
-                    eventType = Left;
+                    eventType = LeftArr;
                     break;
                 case SDLK_RIGHT :
-                    eventType = Right ;
+                    eventType = RightArr ;
                 default :
                     break;
             }
         default :
-            eventType = None ;
+            // eventType = None ;
             break;
     }
 

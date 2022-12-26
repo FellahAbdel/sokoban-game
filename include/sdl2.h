@@ -23,8 +23,8 @@ typedef struct SDLContext {
 */
 typedef enum Event {
     Quit,  ///< Quitter
-    Left,  ///< Gauche
-    Right, ///< Droit
+    LeftArr,  ///< Gauche
+    RightArr, ///< Droit
     Up,    ///< En haut
     Down,  ///< En bas
     None   ///< Rien

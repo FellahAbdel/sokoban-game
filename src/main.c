@@ -14,12 +14,37 @@ int main(void){
     
     sdl_init();
 
+
     grid gameGrid = initLevel("../level1.txt");
 
     displaySdl2(gameGrid);
 
 
 	bool run = true;
+    while(run){
+        switch(eventSdl2()){
+            case Quit :
+                run = false ;
+                break;
+            case Up:
+                printf("Up\n");
+                break ;
+            case Down:
+                printf("Down\n");
+                break ;
+            case LeftArr:
+                printf("Left arr\n");
+                break ;
+            case RightArr:
+                printf("Right arr\n");
+                break ;
+            case None:
+                printf("None\n");
+                break;
+        }
+    }
+    
+    goto there;
 	while(run){
         if(areGoalsCoveredByBox(gameGrid)){
             run = false ;
@@ -53,7 +78,7 @@ int main(void){
 		}
 
 	}
-
+    there:
     // Libération de la mémoire.
     free2DCaseType(gameGrid);
     free(gameGrid);
