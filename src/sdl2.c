@@ -197,7 +197,9 @@ Event eventSdl2(){
                     break;
                 case SDLK_RIGHT :
                     eventType = RightArr ;
+                    break;
                 default :
+                    eventType = None ;
                     break;
             }
         default :
