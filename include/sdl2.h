@@ -58,6 +58,10 @@ Event eventSdl2();
 
 Event event();
 
+Event (*handleEvent)();
+
+void (*handleDisplay)(struct Grid *theGrid);
+
 
 
 
