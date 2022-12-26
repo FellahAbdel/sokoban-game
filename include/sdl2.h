@@ -22,12 +22,12 @@ typedef struct SDLContext {
 * Définit le type d'un evenement.
 */
 typedef enum Event {
-    Quit,  ///< Quitter
-    LeftArr,  ///< Gauche
-    RightArr, ///< Droit
-    Up,    ///< En haut
-    Down,  ///< En bas
-    None   ///< Rien
+    Quit,       ///< Quitter
+    LeftArr,    ///< Gauche
+    RightArr,   ///< Droit
+    Up,         ///< En haut
+    Down,       ///< En bas
+    None        ///< Rien
 }Event;
 
 /* @brief 
@@ -55,5 +55,9 @@ void colorPalette();
 void sdlDrawRect(SDL_Rect rect, SDL_Color rectColor);
 
 Event eventSdl2();
+
+Event event();
+
+
 
 

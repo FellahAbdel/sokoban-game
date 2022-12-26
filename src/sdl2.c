@@ -210,4 +210,32 @@ Event eventSdl2(){
     return buttonClicked ;
 }
 
+Event event(){
+    Event buttonClicked;
+    char entry = fgetc(stdin);
+    switch(entry){
+		case 'q' :{
+            buttonClicked = Quit ;
+			break;
+		}
+        case 'k' :{
+            buttonClicked = Up ;
+            break;
+        }
+        case 'l' : {
+            buttonClicked = RightArr ;
+            break;
+        }
+        case 'j' : {
+            buttonClicked = Down ;
+            break;
+        }
+        case 'h' : {
+            buttonClicked = LeftArr ;
+            break;
+        }
+	}
+
+    return buttonClicked ;
+}
 
