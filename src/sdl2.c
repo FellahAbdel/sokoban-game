@@ -216,22 +216,32 @@ Event event(){
     switch(entry){
 		case 'q' :{
             buttonClicked = Quit ;
+            getchar();
 			break;
 		}
         case 'k' :{
             buttonClicked = Up ;
+            getchar();
             break;
         }
         case 'l' : {
             buttonClicked = RightArr ;
+            getchar();
             break;
         }
         case 'j' : {
             buttonClicked = Down ;
+            getchar();
             break;
         }
         case 'h' : {
             buttonClicked = LeftArr ;
+            getchar();
+            break;
+        }
+        default : {
+            buttonClicked = None ;
+            getchar();
             break;
         }
 	}

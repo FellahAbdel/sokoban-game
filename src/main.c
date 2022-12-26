@@ -22,7 +22,7 @@ int main(void){
 
 	bool run = true;
     while(run){
-        switch(eventSdl2()){
+        switch(event()){
             case Quit :
                 run = false ;
                 break;
