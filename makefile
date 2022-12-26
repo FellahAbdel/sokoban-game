@@ -33,8 +33,12 @@ doc :
 archive:
 	tar -cf KAYA_RHABY_PASCIA_HERSCHE_DIALLO_ABDOUL_AZIZ.tar.gz *.c *.h makefile level1.txt README.md Doxyfile
 
-run:
-	cd ./bin/ && ./main
+console:
+	cd ./bin/ && ./main --console
+
+sdl:
+	cd ./bin/ && ./main --sdl2
+
 
 config : 
 	cd SDL2 && ./configure --prefix=${PWD}/../install_dir && make install -j6

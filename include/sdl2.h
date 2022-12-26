@@ -58,9 +58,9 @@ Event eventSdl2();
 
 Event event();
 
-Event (*handleEvent)();
+// Event (*handleEvent)();
 
-void (*handleDisplay)(struct Grid *theGrid);
+// void (*handleDisplay)(struct Grid *theGrid);
 
 
 

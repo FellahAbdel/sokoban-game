@@ -27,7 +27,7 @@ int main(void){
             run = false ;
         }
 
-        switch(eventSdl2()){
+        switch(handleEvent()){
             case Quit :
                 run = false ;
                 break;
