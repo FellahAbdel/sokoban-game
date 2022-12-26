@@ -22,63 +22,39 @@ int main(void){
 
 	bool run = true;
     while(run){
-        switch(event()){
+
+        if(areGoalsCoveredByBox(gameGrid)){
+            run = false ;
+        }
+
+        switch(eventSdl2()){
             case Quit :
                 run = false ;
                 break;
             case Up:
-                printf("Up\n");
+                // printf("Up\n");
+                movePlayer(gameGrid, Top);
                 break ;
             case Down:
-                printf("Down\n");
+                // printf("Down\n");
+                movePlayer(gameGrid, Bottom);
                 break ;
             case LeftArr:
-                printf("Left arr\n");
+                // printf("Left arr\n");
+                movePlayer(gameGrid, Left);
                 break ;
             case RightArr:
-                printf("Right arr\n");
+                // printf("Right arr\n");
+                movePlayer(gameGrid, Right);
                 break ;
             case None:
                 printf("None\n");
                 break;
         }
+
+        displaySdl2(gameGrid);
     }
     
-    goto there;
-	while(run){
-        if(areGoalsCoveredByBox(gameGrid)){
-            run = false ;
-        }
-
-        // system("clear");
-        display(gameGrid);
-		char entry = fgetc(stdin);
-		switch(entry){
-			case 'q' :{
-				run = false;
-				break;
-			}
-            case 'k' :{
-                movePlayer(gameGrid, Top);
-                getchar();
-                break;
-            }
-            case 'l' : {
-                movePlayer(gameGrid, Right);
-                break;
-            }
-            case 'j' : {
-                movePlayer(gameGrid, Bottom);
-                break;
-            }
-            case 'h' : {
-                movePlayer(gameGrid, Left);
-                break;
-            }
-		}
-
-	}
-    there:
     // Libération de la mémoire.
     free2DCaseType(gameGrid);
     free(gameGrid);
