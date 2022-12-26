@@ -175,6 +175,11 @@ void colorPalette(){
     };
 }
 
+
+/**
+ * @brief Gestion des evenements SDL.
+ * @return Event un evenement
+ */
 Event eventSdl2(){
     Event buttonClicked ;
 
@@ -210,6 +215,10 @@ Event eventSdl2(){
     return buttonClicked ;
 }
 
+/**
+ * @brief Gestion des evenements claviers.
+ * @return Event un evenement
+ */
 Event event(){
     Event buttonClicked;
     char entry = fgetc(stdin);
