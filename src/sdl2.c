@@ -8,8 +8,8 @@ SDLContext context; /// Une variable globale.
 SDL_Palette *palette ; /// Une variable globale
 
 void sdl_init() {
-    int const width = 700;
-    int const height = 600;
+    int const width = 1280;
+    int const height = 720;
 
     context = (SDLContext){NULL, NULL, .width = 0, .height = 0};
 
@@ -19,7 +19,7 @@ void sdl_init() {
 
     SDL_Window *window =
         SDL_CreateWindow("Sokoban", SDL_WINDOWPOS_CENTERED,
-            SDL_WINDOWPOS_CENTERED, 700, 600, SDL_WINDOW_SHOWN);
+            SDL_WINDOWPOS_CENTERED, 1280, 720, SDL_WINDOW_SHOWN);
 
     if (!window) {
         return;
