@@ -21,7 +21,7 @@ $(EXEC) : $(OBJ) | $(B_REP)
 $(O_REP)%.o : $(S_REP)%.c | $(O_REP)
 	gcc -c $< -o $@ $(IFLAGS)
 
-$(B_REP) :
+$(B_REP) $(O_REP):
 	mkdir $@
 
 clean :
@@ -31,7 +31,7 @@ doc :
 	doxygen Doxyfile
 
 archive:
-	tar -cf KAYA_RHABY_PASCIA_HERSCHE_DIALLO_ABDOUL_AZIZ.tar.gz *.c *.h makefile level1.txt README.md Doxyfile
+	tar -cf KAYA_RHABY_PASCIA_HERSCHE_DIALLO_ABDOUL_AZIZ.tar.gz $(S_REP) $(H_REP) makefile level1.txt README.md Doxyfile
 
 console:
 	cd ./bin/ && ./main --console

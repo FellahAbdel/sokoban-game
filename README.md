@@ -47,6 +47,6 @@ Les consignes et l'énoncé se trouve à cette address [TP Sokoban](https://tech
 
      ./configure --prefix=$PWD/../install_dir ne fonctionne pas
      Solution :
-
+        Avec quelques gribouillages ça a marché à la fin mais je ne sais pas comment.
 
 # KAYA RHABY PASCIA HERSHE & DIALLO ABDOUL AZIZ
