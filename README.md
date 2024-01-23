@@ -46,4 +46,9 @@ Use the following keys to navigate:
 - `l`: Right
 - `j`: Left
 
+Live demo :
+[console live demo](./console-demo.webm)
+
 In SDL mode, use the arrow keys for movement.
+
+[sdl live demo](./sdl-demo.webm)
