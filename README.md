@@ -1,33 +1,49 @@
 # Sokoban
 
-Vous trouverez ici les fichiers de base pour le TP noté concernant le jeu du Sokoban
-Les consignes et l'énoncé se trouve à cette address [TP Sokoban](https://techdevprintemps2022.pages.unistra.fr/TP_TechDevEnonce/)
+This project is about one of the oldest famous games in the world. We coded its simplest version by using C programming language.
 
-# 1 ère Difficulté :
+## Table of Contents
 
-    Comment faire une allocation dynamique d'un tableau à 2
-    dimensions de type enum CaseType ?
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
 
-    Ressources pour sortir de l'ignorance :
-        StackOverflow, Youtube, et Elias
+## Features
 
-# 2 ème Difficulté :
+We implemented two versions of the game which are the console and the graphic version with the of help the SDL graphic library. That is to say, we could play it via the terminal or in a pop window. You should know the following details :
 
-    Problème de dependance circulaire de player.h et grid.h
+- `@` : Player
+- `$` : Box
+- `.` : Goals
+- `#` : Walls
 
-    1 ère solution :
-        Ecrire le prototype de la fonction movePlayer dans
-        grid.h et son développement dans grid.c (Pas trop fin)
-    2 ème solution (J'èspere qu'il y en une):
-        struct Grid dans player.h
-        https://stackoverflow.com/questions/10122621/c-circular-dependency
+## Installation
 
-# 3 ème difficulté :
+To experience the game you should follow the steps below, you should install the SDL library before.
 
-    Comment stabiliser la cible ?, c'est-à-dire qu'une fois que
-    le joueur quitte la cible, elle y reste toujours.
+```bash
+$ git clone https://github.com/FellahAbdel/sokoban-game.git
+$ cd
+$ git switch parti2sdl
+```
 
-    Solution :
-        Dans la deuxième partie.
+## Usage
 
-# KAYA RHABY PASCIA HERSHE & DIALLO ABDOUL AZIZ
+It's so simple, use the following bash command.
+
+```bash
+$ make              # To compile the program
+$ make console      # To lunch the game in console mode
+$ make sdl          # To lunch the game in sdl (graphic) mode
+```
+
+Here is what the game looks like in console mode :
+
+Use the keys below to make moves :
+
+- `j`: Bottom
+- `k`: Up
+- `l`: Right
+- `j`: Left
+
+In the sdl mode, use the left, right, up, and down keys.
