@@ -1,6 +1,6 @@
-# Sokoban
+# Sokoban Game
 
-This project is about one of the oldest famous games in the world. We coded its simplest version by using C programming language.
+This project revolves around one of the oldest and most renowned games globally. We have implemented its simplest version using the C programming language.
 
 ## Table of Contents
 
@@ -10,40 +10,40 @@ This project is about one of the oldest famous games in the world. We coded its 
 
 ## Features
 
-We implemented two versions of the game which are the console and the graphic version with the of help the SDL graphic library. That is to say, we could play it via the terminal or in a pop window. You should know the following details :
+We have developed two versions of the game: a console version and a graphic version utilizing the SDL graphic library. This means that players can engage with the game either through the terminal or in a pop-up window. The key elements in the game include:
 
-- `@` : Player
-- `$` : Box
-- `.` : Goals
-- `#` : Walls
+- `@`: Player
+- `$`: Box
+- `.`: Goals
+- `#`: Walls
 
 ## Installation
 
-To experience the game you should follow the steps below, you should install the SDL library before.
+To enjoy the game, follow the steps below. It's important to install the SDL library beforehand.
 
 ```bash
 $ git clone https://github.com/FellahAbdel/sokoban-game.git
-$ cd
+$ cd sokoban-game
 $ git switch parti2sdl
 ```
 
 ## Usage
 
-It's so simple, use the following bash command.
+Using the game is straightforward; simply execute the following bash commands.
 
 ```bash
-$ make              # To compile the program
-$ make console      # To lunch the game in console mode
-$ make sdl          # To lunch the game in sdl (graphic) mode
+$ make              # Compile the program
+$ make console      # Launch the game in console mode
+$ make sdl          # Launch the game in SDL (graphic) mode
 ```
 
-Here is what the game looks like in console mode :
+In console mode, the game appears as follows:
 
-Use the keys below to make moves :
+Use the following keys to navigate:
 
-- `j`: Bottom
+- `j`: Down
 - `k`: Up
 - `l`: Right
 - `j`: Left
 
-In the sdl mode, use the left, right, up, and down keys.
+In SDL mode, use the arrow keys for movement.
